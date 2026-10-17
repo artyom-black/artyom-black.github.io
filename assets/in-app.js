@@ -1,12 +1,13 @@
-/* Helps visitors who open the site inside TikTok, Instagram or Facebook (their built-in browsers).
-   Those browsers block links that jump to Chrome or the Play Store ("action can't be completed"),
-   so instead of jumping we show people how to use the app's own ⋯ → "Open in browser" menu.
+/* Helps visitors who open the site inside TikTok's built-in browser.
+   TikTok blocks links that jump to Chrome or the Play Store ("action can't be completed"),
+   so instead of jumping we show people how to use TikTok's own ⋯ → "Open in browser" menu.
+   (Instagram and Facebook open Play Store links fine on their own, so they're left alone.)
    - A small bar at the top. Closing it with × hides it for good.
    - On Android, tapping "Get it on Google Play" shows a short panel with the same tip.
    Everyone else (normal browsers, desktop) sees no change. Loaded by assets/app.js. */
 (() => {
   const ua = navigator.userAgent || "";
-  const APPS = [["TikTok", /musical_ly|BytedanceWebview|TikTok|trill_/i], ["Instagram", /Instagram/i], ["Facebook", /FBAN|FBAV|FB_IAB/i]];
+  const APPS = [["TikTok", /musical_ly|BytedanceWebview|TikTok|trill_/i]];
   const hit = APPS.find(([, re]) => re.test(ua));
   if (!hit) return;
   const host = hit[0];
