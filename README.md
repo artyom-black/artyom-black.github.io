@@ -84,4 +84,4 @@ If an animation is missing or throws an error, the default animation is used.
 ## Notes
 
 - `tintora-sort/assets/tintora_sort_android_version.json` is Tintora Sort's update-check file, moved from the old `TintoraSort-InfoSite` repo.
-- `assets/in-app.js` helps visitors who open the site inside TikTok, Instagram or Facebook: a small "Better in Chrome" bar, and on Android the install button tries the Play Store app first, then offers to continue in Chrome. Other visitors see no change.
+- `assets/in-app.js` helps visitors who open the site inside TikTok, Instagram or Facebook. Those apps block jumping to Chrome or the Play Store, so it shows how to use their own ⋯ → Open in browser menu: a small top bar, and on Android a short panel when they tap install. Other visitors see no change.
