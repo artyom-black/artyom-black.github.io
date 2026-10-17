@@ -1,0 +1,20 @@
+{
+  "name": "Tintora Sort",
+  "kind": "Game",
+  "genre": "Puzzle",
+  "line": "Pour the colors from bottle to bottle until every bottle holds just one.",
+  "color": "#1696db",
+  "googlePlay": "https://play.google.com/store/apps/details?id=com.artyomblack.tintorasort",
+  "icon": "art/icon.webp",
+  "poster": "art/poster.jpg",
+  "video": "art/gameplay.mp4",
+  "privacy": "privacy/",
+  "terms": "terms/",
+  "facts": [
+    "Tap a bottle, then tap where it should pour",
+    "Hidden colors show up as you clear the layers above them",
+    "Finished bottles get a cork",
+    "Undo, an extra bottle or a restart when you're stuck"
+  ],
+  "oldIds": ["tintora"]
+}

@@ -1,0 +1,8 @@
+/* This app only. Every rule starts with [data-app="my-new-app"] (change it to your folder name).
+   [data-app="..."].opening  = while the opening animation plays.
+   --cx / --cy               = where the tapped icon was on screen. */
+[data-app="my-new-app"] .mna-world{background:radial-gradient(circle at 50% 20%,#1d3b66,#05070d 70%)}
+[data-app="my-new-app"] .mna-burst{position:absolute;inset:0;background:#33aaff;clip-path:circle(0 at var(--cx,50%) var(--cy,50%))}
+[data-app="my-new-app"].opening .mna-burst{animation:mna-in .7s var(--ease) forwards,mna-out .5s .75s forwards}
+@keyframes mna-in{to{clip-path:circle(150% at var(--cx,50%) var(--cy,50%))}}
+@keyframes mna-out{to{opacity:0}}
