@@ -1,4 +1,4 @@
-Everything for this app except its policy page goes in this folder.
+Everything for this app except its web pages goes in this folder.
 
 Needed:
   info.json      name, Google Play link, description (see the main README)

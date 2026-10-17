@@ -12,36 +12,39 @@ app-ads.txt       AdMob file (must stay in the root)
 assets/           shared website code, styles and logos
 template/         blank app folder to copy for a new app
 
-i-love-kanji/
-  index.html      Privacy Policy + Terms of Service
-  assets/         everything else for this app
-    info.json       name, Google Play link, description...
-    icon.webp       app icon
-    poster.jpg      card picture
-    gameplay.mp4    gameplay video
-    animation.js    this app's opening animation and background
-    animation.css   styles for that animation
-    ...             any other pictures the app page uses
+tunnel-ride/
+  index.html              the app's page on the website (same file for every app, don't edit)
+  privacy-policy/index.html
+  terms-of-service/index.html
+  assets/                 everything else for this app
+    info.json               name, Google Play link, description...
+    icon.webp  poster.jpg  gameplay.mp4
+    animation.js            this app's opening animation and background
+    animation.css           styles for that animation
+    ...                     any other pictures the app page uses
+i-love-kanji/     same layout
 tintora-sort/     same layout
-tunnel-ride/      same layout
 ```
 
 ## Links
 
-| App | Privacy Policy | Terms of Service |
-|---|---|---|
-| I Love Kanji | https://artyom-black.github.io/i-love-kanji/ | https://artyom-black.github.io/i-love-kanji/#terms-of-service |
-| Tintora Sort | https://artyom-black.github.io/tintora-sort/ | https://artyom-black.github.io/tintora-sort/#terms-of-service |
-| Tunnel Ride | https://artyom-black.github.io/tunnel-ride/ | https://artyom-black.github.io/tunnel-ride/#terms-of-service |
+| Page | Address |
+|---|---|
+| Homepage | https://artyom-black.github.io/ |
+| App page | https://artyom-black.github.io/tunnel-ride/ |
+| Privacy Policy | https://artyom-black.github.io/tunnel-ride/privacy-policy/ |
+| Terms of Service | https://artyom-black.github.io/tunnel-ride/terms-of-service/ |
 
-Use the Privacy Policy links in Google Play Console.
+Same pattern for every app (`i-love-kanji`, `tintora-sort`, ...).
+Opening an app on the homepage changes the address to `/app-name/`, and the back button closes it.
+Use the **privacy-policy** address in Google Play Console.
 
 ## Add a new app
 
 1. **Copy** the `template` folder and rename the copy to the app's name in lowercase with dashes, like `space-cats`.
-   No spaces or capitals; this name becomes the link `artyom-black.github.io/space-cats/`.
-2. **Policy page:** fill in the `[BRACKETS]` in `space-cats/index.html`, or replace it with your own page.
-   It just has to be called `index.html` and show the Terms when the link ends in `#terms-of-service`.
+   No spaces or capitals; this name becomes the address `artyom-black.github.io/space-cats/`.
+2. **Policies:** fill in the `[BRACKETS]` in `space-cats/privacy-policy/index.html` and `space-cats/terms-of-service/index.html`,
+   or replace them with your own pages (keep the file names).
 3. **Pictures:** put `icon.webp` and `poster.jpg` in `space-cats/assets/` (and `gameplay.mp4` if you have one).
 4. **Info:** fill in `space-cats/assets/info.json` (fields below).
 5. **Animation:** in `assets/animation.js` and `assets/animation.css`, change `my-new-app` to `space-cats`,
@@ -57,7 +60,9 @@ Use the Privacy Policy links in Google Play Console.
    ```
    Every name in quotes, a comma after every line except the last.
 7. Upload. The app appears with its card, animation and Privacy / Terms links.
-8. In Google Play Console, set the privacy policy URL to `https://artyom-black.github.io/space-cats/`.
+8. In Google Play Console, set the privacy policy URL to `https://artyom-black.github.io/space-cats/privacy-policy/`.
+
+Don't edit `space-cats/index.html`. It's the same small file in every app folder and opens the app from the folder name.
 
 To hide an app, remove its line from `apps.json`. To reorder apps, reorder the lines.
 
@@ -109,5 +114,5 @@ If the game reads it from the old address, keep that old repo until a game updat
 
 ## Custom domain (later)
 
-Everything keeps working with a domain like `artyomblack.com`; links become `artyomblack.com/space-cats/`.
+Everything keeps working with a domain like `artyomblack.com`; links become `artyomblack.com/space-cats/privacy-policy/`.
 Set it in this repo's Settings → Pages, then update the links in Google Play Console.
