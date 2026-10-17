@@ -143,23 +143,23 @@ footer.ft nav a{text-decoration:none}
 @keyframes dfltOut{to{opacity:0}}
 
 /* ---------- only inside TikTok / Instagram / Facebook browsers (assets/in-app.js) ---------- */
-.inapp-bar{position:relative;z-index:25;display:flex;align-items:center;gap:10px;padding:9px var(--gutR) 9px var(--gut);padding-top:calc(9px + env(safe-area-inset-top,0px));background:#16161a;border-bottom:1px solid var(--line);font-size:13px;color:#d6d6dc}
-.inapp-bar svg{width:18px;height:18px;flex:none;color:#fff}
-.inapp-bar span{flex:1;min-width:0;line-height:1.35}
-.inapp-bar b{color:#fff;font-weight:600}
-.inapp-open{background:#fff;color:#000;text-decoration:none;font-family:var(--display);font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:999px;flex:none}
+.inapp-bar{position:relative;z-index:25;display:flex;align-items:center;gap:8px;padding:9px var(--gutR) 9px var(--gut);padding-top:calc(9px + env(safe-area-inset-top,0px));background:#16161a;border-bottom:1px solid var(--line);font-size:13px;color:#d6d6dc}
+.inapp-bar > svg{width:18px;height:18px;flex:none;color:#fff}
+.inapp-bar span{flex:1;min-width:0;line-height:1.4}
+.inapp-bar b,.inapp-panel p b{color:#fff;font-weight:700}
+.inapp-dots{display:inline-block;padding:0 7px;border-radius:6px;background:rgba(255,255,255,.14);color:#fff;font-weight:800;line-height:1.35;letter-spacing:1px}
 .inapp-x{width:30px;height:30px;display:grid;place-items:center;color:#8f8f98;flex:none}
-.inapp-x svg{width:16px;height:16px;color:currentColor}
+.inapp-x svg{width:16px;height:16px}
 .inapp-sheet{position:fixed;inset:0;z-index:95;background:rgba(0,0,0,0);display:flex;align-items:flex-end;justify-content:center;transition:background .3s}
 .inapp-sheet.on{background:rgba(0,0,0,.55)}
-.inapp-panel{width:100%;max-width:520px;background:#1c1c21;border:1px solid rgba(255,255,255,.12);border-bottom:0;border-radius:22px 22px 0 0;padding:12px 20px calc(20px + env(safe-area-inset-bottom,0px));text-align:center;transform:translateY(100%);transition:transform .35s var(--out)}
+.inapp-panel{width:100%;max-width:520px;background:#1c1c21;border:1px solid rgba(255,255,255,.12);border-bottom:0;border-radius:22px 22px 0 0;padding:12px 20px calc(18px + env(safe-area-inset-bottom,0px));text-align:center;transform:translateY(100%);transition:transform .35s var(--out)}
 .inapp-sheet.on .inapp-panel{transform:none}
 .inapp-grab{display:block;width:36px;height:4px;border-radius:4px;background:rgba(255,255,255,.25);margin:0 auto 16px}
-.inapp-panel b{display:block;font-family:var(--display);font-weight:800;font-size:18px}
-.inapp-panel p{margin:6px 0 18px;color:#a9a9b1;font-size:14px}
-.inapp-go{display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#000;text-decoration:none;font-family:var(--display);font-weight:700;font-size:15px;padding:15px;border-radius:999px}
-.inapp-go svg{width:20px;height:20px}
-.inapp-later{margin-top:10px;padding:10px;color:#8f8f98;font-size:14px}
+.inapp-panel > b{display:block;font-family:var(--display);font-weight:800;font-size:18px}
+.inapp-panel p{margin:8px 0 18px;color:#b4b4bc;font-size:14.5px;line-height:1.55}
+.inapp-go{display:block;width:100%;background:#fff;color:#000;font-family:var(--display);font-weight:700;font-size:15px;padding:15px;border-radius:999px}
+.inapp-row{display:flex;justify-content:center;gap:22px;margin-top:12px}
+.inapp-copy,.inapp-here{padding:8px 4px;color:#9b9ba4;font-size:13.5px;text-decoration:none}
 
 @media (max-height:720px) and (max-width:899px){
   header.top{padding-top:10px;padding-bottom:6px}
