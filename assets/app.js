@@ -236,7 +236,7 @@ loadApps().then(apps=>{
   tabbar.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===first));
   tabbar.hidden=tabbar.querySelectorAll("button:not([hidden])").length<2;
   render(first.dataset.k,false);requestAnimationFrame(()=>placePill(first));
-  // artyom-black.github.io/tunnel-ride/ opens that app directly. Old links like /#tunnel still work.
+  // artyomblack.com/tunnel-ride/ opens that app directly. Old links like /#tunnel still work.
   if(landing){const a=APPS.find(x=>x.id===landing||(x.oldIds||[]).includes(landing));
     if(a){if(location.hash){try{history.replaceState(null,"",new URL(a.id+"/",ROOT).href);}catch(e){}}openFromLink(a,true);}
     else{$("#intro").classList.remove("done");intro();}}
