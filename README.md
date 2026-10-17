@@ -1,6 +1,6 @@
-# artyom-black.github.io
+# artyomblack.com
 
-Website for Artyom Black's games and apps.
+Website for Artyom Black's games and apps, live at https://artyomblack.com (repo: artyom-black.github.io).
 Each app has its own folder. The homepage reads `apps.json` and builds itself from those folders.
 
 ## Structure
