@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "required_version_code": 5,
+  "required_version": "1.0.5",
+  "message": "Please update to the latest version to continue playing.",
+  "market_url": "market://details?id=com.artyomblack.tintorasort",
+  "play_store_url": "https://play.google.com/store/apps/details?id=com.artyomblack.tintorasort"
+}

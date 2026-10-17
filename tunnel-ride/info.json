@@ -1,0 +1,29 @@
+{
+  "name": "Tunnel Ride",
+  "kind": "Game",
+  "genre": "Action",
+  "subtitle": "Survival Shooter",
+  "line": "Fly your drill up through the tunnels, dodge the rocks, shoot through walls and beat what lives down there.",
+  "color": "#f77205",
+  "googlePlay": "https://play.google.com/store/apps/details?id=com.artyomblackgames.tunnelride",
+  "icon": "art/icon.webp",
+  "poster": "art/poster.jpg",
+  "video": "art/gameplay.mp4",
+  "privacy": "privacy/",
+  "terms": "terms/",
+  "facts": [
+    "Swipe left or right to change lanes",
+    "Tap to shoot",
+    "Break the big walls before they reach you",
+    "Collect coins and upgrade your drill in the Garage"
+  ],
+  "gallery": {
+    "title": "Down there",
+    "items": [
+      { "image": "art/pebble_imp.webp", "name": "Nib" },
+      { "image": "art/tunnel_biter.webp", "name": "Bite" },
+      { "image": "art/boss_rock_guardian.webp", "name": "Rust" }
+    ]
+  },
+  "oldIds": ["tunnel"]
+}

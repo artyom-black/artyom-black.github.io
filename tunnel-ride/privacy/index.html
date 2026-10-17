@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy and Terms of Service for Tunnel Ride, including internet connectivity checks, gameplay data, ownership, and third-party services." />
+  <title>Tunnel Ride — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f4f4f2;
+      --panel: #ffffff;
+      --panel-soft: #fafaf9;
+      --text: #111111;
+      --muted: #666666;
+      --line: #dfdfdb;
+      --line-strong: #cfcfca;
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(0,0,0,0.04), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(0,0,0,0.03), transparent 22%),
+        var(--bg);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 28px 20px 72px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, #ffffff, #fbfbfa);
+      border: 1px solid rgba(17, 17, 17, 0.08);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 34px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(17,17,17,0.10);
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(255,255,255,0.85);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .hero-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 208px;
+      text-align: left;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .hero-title-inner {
+      width: 100%;
+      margin: auto 0;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .summary {
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--panel-soft);
+      border: 1px solid rgba(17,17,17,0.08);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+    }
+
+    .triple {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .value {
+      font-size: 1rem;
+      word-break: break-word;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid #111111;
+      background: #111111;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .button,
+    .email {
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .contact-card,
+    .contact-box {
+      position: relative;
+      z-index: 1;
+    }
+
+    .switcher {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .switcher .toggle {
+      appearance: none;
+      border: 1px solid rgba(17,17,17,0.12);
+      background: #ffffff;
+      color: var(--text);
+      border-radius: 999px;
+      min-height: 42px;
+      padding: 0 16px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .switcher .toggle:hover {
+      transform: translateY(-1px);
+      background: #f7f7f6;
+    }
+
+    .switcher .toggle.active {
+      background: #111111;
+      color: #ffffff;
+      border-color: #111111;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .toc,
+    .content {
+      background: var(--panel);
+      border: 1px solid rgba(17,17,17,0.08);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      padding: 20px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 0.92rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--text);
+      border: 1px solid transparent;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .toc a:hover {
+      background: #f7f7f6;
+      border-color: rgba(17,17,17,0.08);
+      transform: translateX(2px);
+    }
+
+    .content {
+      overflow: hidden;
+    }
+
+    section {
+      padding: 28px 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-child {
+      border-top: none;
+    }
+
+    section h2 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: #f8f8f7;
+      color: #1f1f1f;
+    }
+
+    .contact-box {
+      margin-top: 10px;
+      padding: 18px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      background: #fbfbfa;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(17,17,17,0.22);
+    }
+
+    .footer {
+      margin-top: 18px;
+      text-align: left;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .doc-view {
+      display: none;
+    }
+
+    .doc-view.active {
+      display: contents;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .hero,
+      .toc,
+      .content {
+        border-radius: 22px;
+      }
+
+      .hero {
+        padding: 22px;
+      }
+
+      .triple {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <span class="eyebrow" id="hero-eyebrow">Tunnel Ride • Privacy Policy</span>
+      <div class="hero-grid">
+        <div class="hero-title">
+          <div class="hero-title-inner">
+            <h1 id="hero-heading">Privacy Policy</h1>
+            <p class="lead" id="hero-lead">This page contains the Privacy Policy and Terms of Service for Tunnel Ride. Use the buttons below to switch between them.</p>
+          </div>
+          <div class="switcher" aria-label="Legal document switcher">
+            <button class="toggle active" id="privacy-toggle" type="button" data-doc="privacy">Privacy Policy</button>
+            <button class="toggle" id="terms-toggle" type="button" data-doc="terms">Terms of Service</button>
+          </div>
+        </div>
+
+        <div class="summary">
+          <div class="triple">
+            <div class="card">
+              <span class="label">App</span>
+              <div class="value">Tunnel Ride</div>
+            </div>
+            <div class="card">
+              <span class="label">Effective date</span>
+              <div class="value" id="effective-date">March 30, 2026</div>
+            </div>
+          </div>
+
+          <div class="card contact-card">
+            <div>
+              <span class="label">Contact</span>
+              <div class="value">Questions?</div>
+            </div>
+            <a class="button" href="https://mail.google.com/mail/u/0/?to=support.artyomblack@gmail.com&amp;tf=cm" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" onclick="openEmailLink(event, this.href)">Send email</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="doc-view active" id="privacy-view">
+        <nav class="toc" aria-label="Privacy Policy table of contents">
+          <h2>Contents</h2>
+          <a href="#overview">1. Overview</a>
+          <a href="#collect">2. Information We Collect</a>
+          <a href="#use">3. How We Use Information</a>
+          <a href="#third-party">4. Third-Party Services</a>
+          <a href="#retention">5. Data Retention and Deletion</a>
+          <a href="#children">6. Children’s Privacy</a>
+          <a href="#security">7. Data Security</a>
+          <a href="#choices">8. Your Choices</a>
+          <a href="#changes">9. Changes to This Policy</a>
+          <a href="#contact">10. Contact</a>
+        </nav>
+
+        <article class="content">
+          <section id="overview">
+            <h2>1. Overview</h2>
+            <p>
+              This Privacy Policy explains how information is collected, used, stored, and disclosed when you install,
+              access, or play <strong>Tunnel Ride</strong> (the “Game”).
+            </p>
+            <p>
+              Tunnel Ride requires an active internet connection to start and play. In connection with gameplay, app distribution,
+              platform functionality, and advertising, certain information may be stored locally on your device and certain
+              information may be processed by third-party service providers.
+            </p>
+          </section>
+
+          <section id="collect">
+            <h2>2. Information We Collect</h2>
+            <p>Depending on your device, platform, and the services used in connection with the Game, the following categories of information may be collected or processed:</p>
+            <ul>
+              <li><strong>Device and technical information:</strong> device model, operating system version, app version, language, general diagnostic information, and crash, stability, or performance data.</li>
+              <li><strong>Gameplay and local data:</strong> game settings, progress, scores, unlocks, and similar gameplay information stored locally on your device.</li>
+              <li><strong>Advertising and identifier data:</strong> IP address, advertising identifiers or similar device identifiers, ad interactions, and basic app interaction data that may be processed by advertising or platform providers.</li>
+              <li><strong>Connectivity verification data:</strong> the Game may send a lightweight network request to verify whether an active internet connection is available before gameplay begins.</li>
+            </ul>
+            <div class="note">
+              Tunnel Ride does not require you to create a user account. If you contact the developer directly by email,
+              the information you provide in your message will be used only to respond to your request.
+            </div>
+          </section>
+
+          <section id="use">
+            <h2>3. How We Use Information</h2>
+            <p>Information handled in connection with the Game may be used to:</p>
+            <ul>
+              <li>operate, maintain, and provide the Game,</li>
+              <li>verify internet connectivity and determine whether access to the Game can be provided,</li>
+              <li>store gameplay progress and user preferences on your device,</li>
+              <li>improve stability, performance, and gameplay quality,</li>
+              <li>identify, diagnose, and resolve technical issues,</li>
+              <li>serve and measure advertising where ads are enabled, and</li>
+              <li>respond to support or privacy-related inquiries sent to the developer.</li>
+            </ul>
+          </section>
+
+          <section id="third-party">
+            <h2>4. Third-Party Services</h2>
+            <p>
+              Tunnel Ride may use third-party services and SDKs, including Google Play services and Google AdMob / Google Mobile Ads,
+              for app distribution, platform functionality, and advertising.
+            </p>
+            <p>
+              These third-party services may collect or process information in accordance with their own privacy policies and terms.
+              Their data practices are independent from this website and may include the processing of device information, identifiers,
+              IP address, diagnostic data, advertising data, and app interaction data.
+            </p>
+          </section>
+
+          <section id="retention">
+            <h2>5. Data Retention and Deletion</h2>
+            <p>
+              Gameplay progress, settings, and similar local data stored by the Game generally remain on your device until you
+              uninstall the Game or clear the app’s data through your device settings.
+            </p>
+            <p>
+              Information processed by third-party service providers is retained in accordance with their own retention practices,
+              legal obligations, and operational requirements. If you have a question about data handling or would like to make a
+              privacy-related request, you may contact the developer using the email address listed below.
+            </p>
+          </section>
+
+          <section id="children">
+            <h2>6. Children’s Privacy</h2>
+            <p>
+              Tunnel Ride is not intended to knowingly collect personal information directly from children below the age required by
+              applicable law without appropriate authorization. If you believe that personal information may have been provided
+              improperly, please contact the developer so the matter can be reviewed.
+            </p>
+          </section>
+
+          <section id="security">
+            <h2>7. Data Security</h2>
+            <p>
+              Reasonable administrative, technical, and organizational measures are used to help protect information related to the Game.
+              However, no method of electronic storage, transmission, or processing can be guaranteed to be completely secure.
+            </p>
+          </section>
+
+          <section id="choices">
+            <h2>8. Your Choices</h2>
+            <p>Depending on your device and platform settings, you may be able to:</p>
+            <ul>
+              <li>uninstall the Game at any time,</li>
+              <li>clear locally stored app data through your device settings,</li>
+              <li>manage advertising and privacy preferences available on your device or Google account,</li>
+              <li>choose whether to contact the developer with privacy-related questions or requests, and</li>
+              <li>stop using the Game if you do not want to use a service that requires an active internet connection.</li>
+            </ul>
+          </section>
+
+          <section id="changes">
+            <h2>9. Changes to This Policy</h2>
+            <p>
+              This Privacy Policy may be updated from time to time. If changes are made, the updated version will be posted on this page
+              together with a revised effective date.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>10. Contact</h2>
+            <p>If you have questions about this Privacy Policy or would like to make a privacy-related request, you can contact the developer here:</p>
+            <div class="contact-box">
+              <a class="email" href="https://mail.google.com/mail/u/0/?to=support.artyomblack@gmail.com&amp;tf=cm" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" onclick="openEmailLink(event, this.href)">support.artyomblack@gmail.com</a>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="doc-view" id="terms-view">
+        <nav class="toc" aria-label="Terms of Service table of contents">
+          <h2>Contents</h2>
+          <a href="#terms-overview">1. Acceptance of Terms</a>
+          <a href="#license">2. Limited License</a>
+          <a href="#ownership">3. Ownership and Intellectual Property</a>
+          <a href="#pixabay">4. Music and Sound Attribution</a>
+          <a href="#restrictions">5. Restrictions on Use</a>
+          <a href="#services">6. Ads, Third-Party Services, and Internet Use</a>
+          <a href="#disclaimer">7. Disclaimer</a>
+          <a href="#liability">8. Limitation of Liability</a>
+          <a href="#terms-changes">9. Changes to These Terms</a>
+          <a href="#terms-contact">10. Contact</a>
+        </nav>
+
+        <article class="content">
+          <section id="terms-overview">
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+              These Terms of Service govern your access to and use of <strong>Tunnel Ride</strong> (the “Game”). By downloading,
+              installing, accessing, or playing the Game, you agree to these Terms.
+            </p>
+            <p>
+              If you do not agree to these Terms, do not use the Game.
+            </p>
+          </section>
+
+          <section id="license">
+            <h2>2. Limited License</h2>
+            <p>
+              You are granted a limited, non-exclusive, non-transferable, revocable license to use the Game for personal,
+              non-commercial entertainment purposes only, subject to these Terms.
+            </p>
+          </section>
+
+          <section id="ownership">
+            <h2>3. Ownership and Intellectual Property</h2>
+            <p>
+              Except where third-party assets are used under their own licenses, the Game’s design, gameplay concept, visual work,
+              code, text, branding, and original creative content are owned by the developer of Tunnel Ride.
+            </p>
+            <p>
+              You may not copy, reproduce, republish, upload, distribute, sell, modify, reverse engineer, create derivative works from,
+              or otherwise take or use the Game or its original content without prior written permission from the developer.
+            </p>
+            <div class="note">
+              In simple words: the game and its original work are not free for others to take, reuse, or claim as their own without permission.
+            </div>
+          </section>
+
+          <section id="pixabay">
+            <h2>4. Music and Sound Attribution</h2>
+            <p>
+              Certain music and sound effects used in the Game come from <strong>Pixabay</strong> or other third-party sources allowed by their respective licenses.
+            </p>
+            <p>
+              Those third-party assets remain subject to their own license terms and ownership. Nothing in these Terms transfers ownership of those assets to users of the Game.
+            </p>
+          </section>
+
+          <section id="restrictions">
+            <h2>5. Restrictions on Use</h2>
+            <p>You agree not to:</p>
+            <ul>
+              <li>use the Game in a way that violates applicable law,</li>
+              <li>copy or redistribute the Game without permission,</li>
+              <li>commercialize, resell, rent, lease, or sublicense the Game without permission,</li>
+              <li>remove or alter copyright, attribution, branding, or proprietary notices,</li>
+              <li>attempt to interfere with the Game’s operation, connected services, or advertising functionality, or</li>
+              <li>misrepresent the Game, its assets, or its ownership as your own.</li>
+            </ul>
+          </section>
+
+          <section id="services">
+            <h2>6. Ads, Third-Party Services, and Internet Use</h2>
+            <p>
+              The Game may require an internet connection in order to start or function properly. The Game may also use third-party services,
+              including platform services, analytics, or advertising services such as Google Play services and Google AdMob / Google Mobile Ads.
+            </p>
+            <p>
+              Your use of those third-party services may also be subject to their own terms, privacy policies, and technical requirements.
+            </p>
+          </section>
+
+          <section id="disclaimer">
+            <h2>7. Disclaimer</h2>
+            <p>
+              The Game is provided on an “as is” and “as available” basis without warranties of any kind, to the fullest extent permitted by law.
+              No guarantee is made that the Game will always be available, error-free, uninterrupted, or compatible with every device, region, or platform configuration.
+            </p>
+          </section>
+
+          <section id="liability">
+            <h2>8. Limitation of Liability</h2>
+            <p>
+              To the fullest extent permitted by law, the developer will not be liable for indirect, incidental, special, consequential,
+              or punitive damages, or for loss of data, progress, profits, business, goodwill, or device-related issues arising from or related to use of the Game.
+            </p>
+          </section>
+
+          <section id="terms-changes">
+            <h2>9. Changes to These Terms</h2>
+            <p>
+              These Terms of Service may be updated from time to time. If changes are made, the updated version will be posted on this page
+              together with a revised effective date.
+            </p>
+          </section>
+
+          <section id="terms-contact">
+            <h2>10. Contact</h2>
+            <p>If you have questions about these Terms of Service, you can contact the developer here:</p>
+            <div class="contact-box">
+              <a class="email" href="https://mail.google.com/mail/u/0/?to=support.artyomblack@gmail.com&amp;tf=cm" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" onclick="openEmailLink(event, this.href)">support.artyomblack@gmail.com</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <p class="footer">© 2026 Tunnel Ride</p>
+  </div>
+  <script>
+    function openEmailLink(event, gmailUrl) {
+      event.preventDefault();
+      const fallbackUrl = "mailto:support.artyomblack@gmail.com";
+      const newTab = window.open(gmailUrl, "_blank", "noopener,noreferrer");
+      if (!newTab) {
+        window.location.href = fallbackUrl;
+      }
+    }
+
+    const docs = {
+      privacy: {
+        eyebrow: 'Tunnel Ride • Privacy Policy',
+        heading: 'Privacy Policy',
+        title: 'Tunnel Ride — Privacy Policy',
+        date: 'March 30, 2026'
+      },
+      terms: {
+        eyebrow: 'Tunnel Ride • Terms of Service',
+        heading: 'Terms of Service',
+        title: 'Tunnel Ride — Terms of Service',
+        date: 'April 19, 2026'
+      }
+    };
+
+    function setActiveDoc(doc) {
+      const isTerms = doc === 'terms';
+      document.getElementById('privacy-view').classList.toggle('active', !isTerms);
+      document.getElementById('terms-view').classList.toggle('active', isTerms);
+      document.getElementById('privacy-toggle').classList.toggle('active', !isTerms);
+      document.getElementById('terms-toggle').classList.toggle('active', isTerms);
+      document.getElementById('hero-eyebrow').textContent = docs[doc].eyebrow;
+      document.getElementById('hero-heading').textContent = docs[doc].heading;
+      document.getElementById('effective-date').textContent = docs[doc].date;
+      document.title = docs[doc].title;
+      window.location.hash = isTerms ? 'terms-of-service' : 'privacy-policy';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.getElementById('privacy-toggle').addEventListener('click', function() {
+      setActiveDoc('privacy');
+    });
+
+    document.getElementById('terms-toggle').addEventListener('click', function() {
+      setActiveDoc('terms');
+    });
+
+    const initialHash = window.location.hash.toLowerCase();
+    if (initialHash.includes('terms')) {
+      setActiveDoc('terms');
+    } else {
+      setActiveDoc('privacy');
+    }
+  </script>
+</body>
+</html>

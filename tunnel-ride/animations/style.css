@@ -1,0 +1,14 @@
+/* Tunnel Ride only. Every rule starts with [data-app="tunnel-ride"] so it can't affect other apps. */
+[data-app="tunnel-ride"] .tr-world{background:#2a170a}
+[data-app="tunnel-ride"] .tr-dig{position:absolute;left:0;right:0;top:0;height:200%;background:url(../art/ground.webp) repeat-y;background-size:100% 50%;animation:tr-dig 6s linear infinite}
+@keyframes tr-dig{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+[data-app="tunnel-ride"] .tr-drill{position:absolute;inset:0;overflow:hidden;opacity:0}
+[data-app="tunnel-ride"].opening .tr-drill{animation:tr-layer 1.25s forwards}
+@keyframes tr-layer{0%,70%{opacity:1}100%{opacity:0}}
+[data-app="tunnel-ride"] .tr-drill .tr-dig{animation-duration:.9s}
+[data-app="tunnel-ride"] .tr-rk{position:absolute;left:50%;top:110%;width:96px;transform:translateX(-50%)}
+[data-app="tunnel-ride"].opening .tr-rk{animation:tr-up .55s .1s cubic-bezier(.5,0,.9,.6) forwards}
+@keyframes tr-up{to{top:-40%}}
+[data-app="tunnel-ride"] .tr-ck{position:absolute;left:50%;top:50%;width:var(--s);height:var(--s);background:#7a4a22;border:2px solid #2b1608;border-radius:30%;opacity:0}
+[data-app="tunnel-ride"].opening .tr-ck{animation:tr-burst .8s .38s var(--out) forwards}
+@keyframes tr-burst{0%{opacity:1;transform:translate(-50%,-50%)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(220deg)}}
