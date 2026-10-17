@@ -1,14 +1,14 @@
 /* This app's own opening animation and page background.
    The website runs this file when someone opens the app.
-   If you delete this file (and style.css), the app still works with a default animation.
+   If you delete this file (and animation.css), the app still works with a default animation.
 
    RULES
    1. Change "my-new-app" below to this app's folder name.
-   2. Every rule in style.css must start with [data-app="my-new-app"].
+   2. Every rule in animation.css must start with [data-app="my-new-app"].
    3. Give keyframes a unique prefix, like @keyframes mna-fall.
 
    You get:
-     app          everything from info.json, plus app.url("art/x.webp") for files in this folder
+     app          everything from info.json, plus app.url("x.webp") for files in this folder
      Site.reduce  true when the visitor prefers less motion
 */
 (() => {

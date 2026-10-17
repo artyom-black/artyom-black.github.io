@@ -1,6 +1,6 @@
 /* Tunnel Ride only. Every rule starts with [data-app="tunnel-ride"] so it can't affect other apps. */
 [data-app="tunnel-ride"] .tr-world{background:#2a170a}
-[data-app="tunnel-ride"] .tr-dig{position:absolute;left:0;right:0;top:0;height:200%;background:url(../art/ground.webp) repeat-y;background-size:100% 50%;animation:tr-dig 6s linear infinite}
+[data-app="tunnel-ride"] .tr-dig{position:absolute;left:0;right:0;top:0;height:200%;background:url(ground.webp) repeat-y;background-size:100% 50%;animation:tr-dig 6s linear infinite}
 @keyframes tr-dig{from{transform:translateY(-50%)}to{transform:translateY(0)}}
 [data-app="tunnel-ride"] .tr-drill{position:absolute;inset:0;overflow:hidden;opacity:0}
 [data-app="tunnel-ride"].opening .tr-drill{animation:tr-layer 1.25s forwards}

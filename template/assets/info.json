@@ -7,13 +7,8 @@
   "color": "#33aaff",
   "googlePlay": "https://play.google.com/store/apps/details?id=com.artyomblack.mynewapp",
   "comingSoon": false,
-  "icon": "art/icon.webp",
-  "poster": "art/poster.jpg",
-  "video": "art/gameplay.mp4",
-  "privacy": "privacy/",
-  "terms": "terms/",
-  "facts": [
-    "How to play, point 1",
-    "How to play, point 2"
-  ]
+  "icon": "icon.webp",
+  "poster": "poster.jpg",
+  "video": "gameplay.mp4",
+  "facts": ["How to play, point 1", "How to play, point 2"]
 }

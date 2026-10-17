@@ -1,7 +1,7 @@
 /* Shared website code. You should not need to edit this file to add an app.
-   It reads apps.json (the list of app folders), then each folder's info.json,
+   It reads apps.json (the list of app folders), then each folder's assets/info.json,
    and builds the cards. When an app is opened it loads that folder's
-   animations/style.css and animations/main.js. If those are missing or broken,
+   assets/animation.css and assets/animation.js. If those are missing or broken,
    a default animation is used instead, so one app can never break the site. */
 (() => {
 const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
@@ -13,14 +13,14 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 
 /* ---------- app animation modules ---------- */
 const modules={},loading={};
-// Each app's animations/main.js calls Site.register("folder-name", {...}).
+// Each app's assets/animation.js calls Site.register("folder-name", {...}).
 window.Site={reduce,register(slug,mod){modules[slug]=mod||{};}};
 function addTag(tag,attrs){return new Promise(res=>{const el=document.createElement(tag);Object.assign(el,attrs);el.onload=()=>res(true);el.onerror=()=>{el.remove();res(false);};document.head.appendChild(el);});}
 function loadModule(a){
   if(!loading[a.id]){
     const work=Promise.all([
-      addTag("link",{rel:"stylesheet",href:a.base+"animations/style.css"}),
-      addTag("script",{src:a.base+"animations/main.js",async:true})
+      addTag("link",{rel:"stylesheet",href:a.base+"animation.css"}),
+      addTag("script",{src:a.base+"animation.js",async:true})
     ]).then(()=>modules[a.id]||null);
     const timeout=new Promise(r=>setTimeout(()=>r(modules[a.id]||null),2500));
     loading[a.id]=Promise.race([work,timeout]);
@@ -35,13 +35,15 @@ async function loadApps(){
   let slugs=[];
   try{slugs=await (await fetch("apps.json",{cache:"no-cache"})).json();}catch(e){console.error("Could not read apps.json",e);return [];}
   const got=await Promise.all(slugs.map(async slug=>{
-    const base=slug.replace(/\/?$/,"/");
+    const folder=slug.replace(/\/?$/,"/"),base=folder+"assets/";
     try{
       const r=await fetch(base+"info.json",{cache:"no-cache"});if(!r.ok)throw new Error(r.status);
       const i=await r.json();if(!i.name)throw new Error("info.json has no name");
       return {...i,id:slug.replace(/\/$/,""),base,kind:i.kind==="App"?"App":"Game",
-        icon:abs(base,i.icon||"art/icon.webp"),poster:abs(base,i.poster||"art/poster.jpg"),video:abs(base,i.video),
-        privacy:abs(base,i.privacy),terms:abs(base,i.terms),
+        icon:abs(base,i.icon||"icon.webp"),poster:abs(base,i.poster||"poster.jpg"),video:abs(base,i.video),
+        // The app folder's index.html is its Privacy Policy + Terms page. Set "privacy"/"terms" to false to hide a link.
+        privacy:i.privacy===false?"":i.privacy?abs(folder,i.privacy):folder,
+        terms:i.terms===false?"":i.terms?abs(folder,i.terms):folder+"#terms-of-service",
         gallery:i.gallery&&{...i.gallery,items:(i.gallery.items||[]).map(g=>({...g,image:abs(base,g.image)}))},
         url:p=>abs(base,p)};
     }catch(e){console.warn(`Skipping "${slug}": could not read ${base}info.json`,e);return null;}

@@ -1,5 +1,5 @@
 /* I Love Kanji: night background with falling sakura + a pink "bloom" opening with bursting petals.
-   Styles are in style.css next to this file. */
+   Styles are in animation.css next to this file. */
 (() => {
   function petals(n) {
     let h = "";

@@ -6,11 +6,9 @@
   "line": "Fly your drill up through the tunnels, dodge the rocks, shoot through walls and beat what lives down there.",
   "color": "#f77205",
   "googlePlay": "https://play.google.com/store/apps/details?id=com.artyomblackgames.tunnelride",
-  "icon": "art/icon.webp",
-  "poster": "art/poster.jpg",
-  "video": "art/gameplay.mp4",
-  "privacy": "privacy/",
-  "terms": "terms/",
+  "icon": "icon.webp",
+  "poster": "poster.jpg",
+  "video": "gameplay.mp4",
   "facts": [
     "Swipe left or right to change lanes",
     "Tap to shoot",
@@ -20,9 +18,9 @@
   "gallery": {
     "title": "Down there",
     "items": [
-      { "image": "art/pebble_imp.webp", "name": "Nib" },
-      { "image": "art/tunnel_biter.webp", "name": "Bite" },
-      { "image": "art/boss_rock_guardian.webp", "name": "Rust" }
+      {"image": "pebble_imp.webp", "name": "Nib"},
+      {"image": "tunnel_biter.webp", "name": "Bite"},
+      {"image": "boss_rock_guardian.webp", "name": "Rust"}
     ]
   },
   "oldIds": ["tunnel"]
