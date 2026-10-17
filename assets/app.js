@@ -226,6 +226,8 @@ function swipeClose(sc){let y0=null,dy=0;
 
 /* ---------- start ---------- */
 function intro(){const el=$("#intro");if(reduce){el.classList.add("done");return;}el.classList.add("run");setTimeout(bolt,1750);setTimeout(()=>el.classList.add("done"),2500);}
+// Extra help for visitors inside TikTok / Instagram / Facebook browsers.
+addTag("script",{src:U("assets/in-app.js"),async:true});
 const landing=slugFromPath()||decodeURIComponent(location.hash.slice(1));
 if(landing){$("#intro").classList.add("done");}else intro();
 loadApps().then(apps=>{
