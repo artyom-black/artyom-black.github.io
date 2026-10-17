@@ -16,5 +16,3 @@ h2{font-family:"Montserrat","Arial Black",system-ui,sans-serif;font-size:19px;ma
 p,li{color:#d9d9df}
 a{color:var(--accent)}
 footer{margin-top:48px;color:var(--muted);font-size:13px}
-.doc{display:none}
-.doc.on{display:block}

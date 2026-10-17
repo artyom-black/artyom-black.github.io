@@ -4,6 +4,26 @@
    assets/animation.css and assets/animation.js. If those are missing or broken,
    a default animation is used instead, so one app can never break the site. */
 (() => {
+// Website root, so links work from the homepage and from /app-name/ (and on a custom domain).
+const ROOT=new URL(".",document.baseURI);
+const U=p=>new URL(p,ROOT).href; // absolute address of a file in this repo
+document.body.insertAdjacentHTML("afterbegin",`<canvas id="sparks" aria-hidden="true"></canvas>
+<div id="flash"></div>
+<header class="top"><a href="${ROOT.href}" aria-label="Artyom Black home"><img src="${U("assets/mark.png")}" alt="Artyom Black"></a></header>
+<main>
+  <section class="head"><h1 id="title"><span>Games</span></h1><p id="count"></p></section>
+  <section class="shelf" aria-label="Titles"><div class="track" id="track"></div><div class="dots" id="dots"></div></section>
+  <footer class="ft">
+    <img src="${U("assets/logo-horizontal.png")}" alt="Artyom Black">
+    <nav><a href="https://play.google.com/store/apps/developer?id=artyom+black" target="_blank" rel="noopener">Google Play</a></nav>
+    <span>© ${new Date().getFullYear()} Artyom Black</span>
+  </footer>
+</main>
+<nav class="tabbar" id="tabbar" aria-label="Category"><span class="tp"></span><button data-k="Game" class="on" id="tabGames">Games</button><button data-k="App" id="tabApps">Apps</button></nav>
+<section id="page" hidden aria-modal="true" role="dialog"></section>
+<div id="intro"><div class="ib"><img src="${U("assets/logo-vertical.png")}" alt=""><i class="sheen"></i></div></div>`);
+const SITE_TITLE=document.title;
+const slugFromPath=()=>decodeURIComponent(location.pathname.slice(ROOT.pathname.length)).split("/")[0];
 const ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 const BACK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
 const PLAY='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.8v18.4c0 .4.4.6.7.4l15.6-9.2c.3-.2.3-.6 0-.8L4.7 2.4c-.3-.2-.7 0-.7.4z"/></svg>';
@@ -33,17 +53,17 @@ function safe(fn,fallback){try{const v=fn();return v==null?fallback:v;}catch(e){
 const abs=(base,p)=>!p?"":/^(https?:|mailto:|\/|#)/.test(p)?p:base+p;
 async function loadApps(){
   let slugs=[];
-  try{slugs=await (await fetch("apps.json",{cache:"no-cache"})).json();}catch(e){console.error("Could not read apps.json",e);return [];}
+  try{slugs=await (await fetch(U("apps.json"),{cache:"no-cache"})).json();}catch(e){console.error("Could not read apps.json",e);return [];}
   const got=await Promise.all(slugs.map(async slug=>{
-    const folder=slug.replace(/\/?$/,"/"),base=folder+"assets/";
+    const folder=U(slug.replace(/\/?$/,"/")),base=folder+"assets/";
     try{
       const r=await fetch(base+"info.json",{cache:"no-cache"});if(!r.ok)throw new Error(r.status);
       const i=await r.json();if(!i.name)throw new Error("info.json has no name");
       return {...i,id:slug.replace(/\/$/,""),base,kind:i.kind==="App"?"App":"Game",
         icon:abs(base,i.icon||"icon.webp"),poster:abs(base,i.poster||"poster.jpg"),video:abs(base,i.video),
-        // The app folder's index.html is its Privacy Policy + Terms page. Set "privacy"/"terms" to false to hide a link.
-        privacy:i.privacy===false?"":i.privacy?abs(folder,i.privacy):folder,
-        terms:i.terms===false?"":i.terms?abs(folder,i.terms):folder+"#terms-of-service",
+        // Real pages: /app-name/privacy-policy/ and /app-name/terms-of-service/. Set "privacy"/"terms" to false to hide a link.
+        privacy:i.privacy===false?"":i.privacy?abs(folder,i.privacy):folder+"privacy-policy/",
+        terms:i.terms===false?"":i.terms?abs(folder,i.terms):folder+"terms-of-service/",
         gallery:i.gallery&&{...i.gallery,items:(i.gallery.items||[]).map(g=>({...g,image:abs(base,g.image)}))},
         url:p=>abs(base,p)};
     }catch(e){console.warn(`Skipping "${slug}": could not read ${base}info.json`,e);return null;}
@@ -154,7 +174,7 @@ async function openApp(id,card){
      ${a.comingSoon||!a.googlePlay?`<span class="cta soon rv" style="--d:4">Coming soon to Google Play</span>`:`<a class="cta rv" style="--d:4" href="${esc(a.googlePlay)}" target="_blank" rel="noopener">${PLAY}Get it on Google Play</a>`}</div>
     <div class="blk rv" style="--d:5"><h3>${a.kind==="Game"?"Gameplay":"Inside the app"}</h3><div class="device">${a.video?`<video muted loop playsinline autoplay preload="auto" poster="${esc(a.poster)}" src="${esc(a.video)}"></video>`:`<img src="${esc(a.poster)}" alt="">`}</div></div>
     ${extra(a)}
-    ${a.privacy||a.terms?`<div class="legal rv" style="--d:10">${a.privacy?`<a href="${esc(a.privacy)}" target="_blank" rel="noopener">Privacy policy</a>`:""}${a.terms?`<a href="${esc(a.terms)}" target="_blank" rel="noopener">Terms of service</a>`:""}</div>`:""}
+    ${a.privacy||a.terms?`<div class="legal rv" style="--d:10">${a.privacy?`<a href="${esc(a.privacy)}">Privacy policy</a>`:""}${a.terms?`<a href="${esc(a.terms)}">Terms of service</a>`:""}</div>`:""}
     <div class="pft">© ${new Date().getFullYear()} Artyom Black</div>
    </div></div>`;
   const pv=page.querySelector(".device video");if(pv){try{pv.currentTime=cvid?cvid.currentTime:0;}catch(e){}pv.play().catch(()=>{});}
@@ -169,11 +189,13 @@ async function openApp(id,card){
   setTimeout(()=>page.classList.add("on-rv"),revealMs);
   page.querySelector(".back").onclick=()=>closeApp();
   swipeClose(page.querySelector(".psc"));
-  try{history.pushState({app:id},"","#"+id);pushed=true;}catch(e){pushed=false;}
+  document.title=`${a.name} · ${SITE_TITLE}`;
+  if(slugFromPath()!==id){try{history.pushState({app:id},"",new URL(id+"/",ROOT).href);pushed=true;}catch(e){pushed=false;}}
 }
 function closeApp(fromPop){
   if(busy||page.hidden)return;busy=true;
-  if(pushed&&!fromPop){pushed=false;try{history.back();}catch(e){}}
+  document.title=SITE_TITLE;
+  if(!fromPop){if(pushed){pushed=false;try{history.back();}catch(e){}}else{try{history.replaceState(null,"",ROOT.href);}catch(e){}}}
   const di=page.querySelector(".picon"),t=di.getBoundingClientRect(),from=srcCard.querySelector(".ic"),s=from.getBoundingClientRect();
   const R=r=>({left:r.left+"px",top:r.top+"px",width:r.width+"px",height:r.height+"px"});
   const fly=document.createElement("img");fly.src=cur.icon;fly.className="fly";document.body.appendChild(fly);Object.assign(fly.style,R(t));di.style.visibility="hidden";
@@ -182,7 +204,20 @@ function closeApp(fromPop){
     from.style.visibility="";fly.remove();page.hidden=true;page.className="";page.innerHTML="";delete page.dataset.app;document.body.style.overflow="";busy=false;
     playV(srcCard);};
 }
-addEventListener("popstate",()=>{if(!page.hidden){pushed=false;closeApp(true);}});
+addEventListener("popstate",()=>{
+  const slug=slugFromPath();
+  if(!page.hidden&&slug!==cur?.id){pushed=false;closeApp(true);}
+  else if(page.hidden&&slug){const a=APPS.find(x=>x.id===slug);if(a)openFromLink(a,false);}
+});
+// Opens an app straight from a link (/app-name/ or an old /#name link).
+function openFromLink(a,first){
+  const b=tabbar.querySelector(`[data-k="${a.kind}"]`);
+  if(!b.classList.contains("on")){tabbar.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));placePill(b);render(a.kind,false);}
+  loadModule(a);
+  setTimeout(()=>{const c=track.querySelector(`[data-id="${a.id}"]`);if(!c)return;
+    c.scrollIntoView({behavior:"auto",inline:"center",block:"nearest"});flow();
+    pushed=false;openApp(a.id,c);},first?250:60);
+}
 addEventListener("keydown",e=>{if(e.key==="Escape")closeApp();});
 function swipeClose(sc){let y0=null,dy=0;
   sc.addEventListener("touchstart",e=>{if(sc.scrollTop<=0){y0=e.touches[0].clientY;dy=0;}},{passive:true});
@@ -191,7 +226,8 @@ function swipeClose(sc){let y0=null,dy=0;
 
 /* ---------- start ---------- */
 function intro(){const el=$("#intro");if(reduce){el.classList.add("done");return;}el.classList.add("run");setTimeout(bolt,1750);setTimeout(()=>el.classList.add("done"),2500);}
-intro();
+const landing=slugFromPath()||decodeURIComponent(location.hash.slice(1));
+if(landing){$("#intro").classList.add("done");}else intro();
 loadApps().then(apps=>{
   APPS=apps;
   // Hide a tab (Games or Apps) when it has nothing in it.
@@ -200,10 +236,9 @@ loadApps().then(apps=>{
   tabbar.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===first));
   tabbar.hidden=tabbar.querySelectorAll("button:not([hidden])").length<2;
   render(first.dataset.k,false);requestAnimationFrame(()=>placePill(first));
-  // Links like artyom-black.github.io/#tunnel-ride open that app directly (old short names still work).
-  const h=decodeURIComponent(location.hash.slice(1));
-  if(h){const a=APPS.find(x=>x.id===h||(x.oldIds||[]).includes(h));if(a){
-    const b=tabbar.querySelector(`[data-k="${a.kind}"]`);if(!b.classList.contains("on"))b.click();
-    loadModule(a);setTimeout(()=>{const c=track.querySelector(`[data-id="${a.id}"]`);if(c)openApp(a.id,c);},reduce?50:2600);}}
+  // artyom-black.github.io/tunnel-ride/ opens that app directly. Old links like /#tunnel still work.
+  if(landing){const a=APPS.find(x=>x.id===landing||(x.oldIds||[]).includes(landing));
+    if(a){if(location.hash){try{history.replaceState(null,"",new URL(a.id+"/",ROOT).href);}catch(e){}}openFromLink(a,true);}
+    else{$("#intro").classList.remove("done");intro();}}
 });
 })();

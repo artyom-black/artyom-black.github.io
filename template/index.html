@@ -2,77 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- This app's page on the website. Same for every app: do not edit.
+     It opens the homepage with this app already open (the app is picked from the folder name). -->
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>[APP NAME] — Privacy Policy and Terms of Service</title>
-<link rel="icon" href="assets/icon.webp">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Manrope:wght@400;600&display=swap">
-<link rel="stylesheet" href="../assets/policy.css">
+<title>Artyom Black</title>
+<meta name="description" content="Games and apps by Artyom Black on Google Play.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Artyom Black">
+<meta property="og:description" content="Games and apps by Artyom Black.">
+<meta property="og:image" content="https://artyom-black.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<!-- This app's Privacy Policy and Terms of Service, on one page.
-     Privacy Policy:   /your-app/
-     Terms of Service: /your-app/#terms-of-service
-     Replace everything in [BRACKETS]. You can also replace this whole file with your own page,
-     as long as it is still called index.html and opens the Terms when the link ends in #terms-of-service. -->
-<div class="wrap">
-  <div class="top"><img src="assets/icon.webp" alt=""><span class="app">[APP NAME]</span></div>
-  <nav class="tabs"><a id="tab-privacy" href="#privacy-policy">Privacy Policy</a><a id="tab-terms" href="#terms-of-service">Terms of Service</a></nav>
-
-  <article class="doc" id="doc-privacy">
-    <h1>Privacy Policy</h1>
-    <p class="date">Last updated: [MONTH DAY, YEAR]</p>
-    <p>This Privacy Policy explains how [APP NAME] ("the App"), made by Artyom Black, handles information when you use it.</p>
-    <h2>1. Information we collect</h2>
-    <p>[What the app collects, for example: game progress stored on your device, crash reports, advertising ID. If it collects nothing, say so.]</p>
-    <h2>2. How we use information</h2>
-    <p>[Why you use it, for example: to save progress, to show ads, to fix bugs.]</p>
-    <h2>3. Third-party services</h2>
-    <p>[List services the app uses, like Google AdMob, Firebase Analytics or Google Play Billing, with links to their privacy policies.]</p>
-    <h2>4. Data retention and deletion</h2>
-    <p>[How long data is kept and how a user can delete it, for example by uninstalling the app.]</p>
-    <h2>5. Children's privacy</h2>
-    <p>[Who the app is for and how children's data is handled.]</p>
-    <h2>6. Changes to this policy</h2>
-    <p>We may update this policy. Changes will be posted on this page with a new date.</p>
-    <h2>7. Contact</h2>
-    <p>Questions? Email <a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a>.</p>
-  </article>
-
-  <article class="doc" id="doc-terms">
-    <h1>Terms of Service</h1>
-    <p class="date">Last updated: [MONTH DAY, YEAR]</p>
-    <p>By downloading or using [APP NAME] ("the App") you agree to these Terms.</p>
-    <h2>1. License</h2>
-    <p>[You get a personal, non-transferable license to use the App on your device.]</p>
-    <h2>2. Purchases and ads</h2>
-    <p>[How in-app purchases, refunds and ads work, if the app has them.]</p>
-    <h2>3. Ownership</h2>
-    <p>[The App and its content belong to Artyom Black, plus credits for any third-party art, music or data.]</p>
-    <h2>4. Restrictions</h2>
-    <p>[What users may not do, for example copying, reselling or cheating.]</p>
-    <h2>5. Disclaimer and limitation of liability</h2>
-    <p>[The App is provided "as is", without warranties, to the extent allowed by law.]</p>
-    <h2>6. Changes to these terms</h2>
-    <p>We may update these Terms. Changes will be posted on this page with a new date.</p>
-    <h2>7. Contact</h2>
-    <p>Questions? Email <a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a>.</p>
-  </article>
-
-  <footer>© Artyom Black</footer>
-</div>
-<script>
-  // Shows the Terms when the link ends in #terms (or #terms-of-service), otherwise the Privacy Policy.
-  function show() {
-    const terms = location.hash.toLowerCase().startsWith("#terms");
-    document.getElementById("doc-privacy").classList.toggle("on", !terms);
-    document.getElementById("doc-terms").classList.toggle("on", terms);
-    document.getElementById("tab-privacy").classList.toggle("on", !terms);
-    document.getElementById("tab-terms").classList.toggle("on", terms);
-    document.title = document.title.split(" — ")[0] + (terms ? " — Terms of Service" : " — Privacy Policy");
-    scrollTo(0, 0);
-  }
-  addEventListener("hashchange", show);
-  show();
-</script>
+<script src="assets/app.js"></script>
 </body>
 </html>
