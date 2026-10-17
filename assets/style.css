@@ -142,7 +142,7 @@ footer.ft nav a{text-decoration:none}
 @keyframes dfltIn{to{clip-path:circle(150% at var(--cx,50%) var(--cy,50%))}}
 @keyframes dfltOut{to{opacity:0}}
 
-/* ---------- only inside TikTok / Instagram / Facebook browsers (assets/in-app.js) ---------- */
+/* ---------- only inside TikTok's browser (assets/in-app.js) ---------- */
 .inapp-bar{position:relative;z-index:25;display:flex;align-items:center;gap:8px;padding:9px var(--gutR) 9px var(--gut);padding-top:calc(9px + env(safe-area-inset-top,0px));background:#16161a;border-bottom:1px solid var(--line);font-size:13px;color:#d6d6dc}
 .inapp-bar > svg{width:18px;height:18px;flex:none;color:#fff}
 .inapp-bar span{flex:1;min-width:0;line-height:1.4}
