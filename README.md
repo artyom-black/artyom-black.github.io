@@ -83,5 +83,4 @@ If an animation is missing or throws an error, the default animation is used.
 
 ## Notes
 
-- `tintora-sort/assets/tintora_sort_android_version.json` is Tintora Sort's update-check file, moved from the old `TintoraSort-InfoSite` repo.
 - `assets/in-app.js` helps visitors who open the site inside TikTok. TikTok blocks jumping to Chrome or the Play Store, so it shows how to use TikTok's own ⋯ → Open in browser menu: a small top bar, and on Android a short panel when they tap install. Everyone else, including Instagram and Facebook, sees no change.
