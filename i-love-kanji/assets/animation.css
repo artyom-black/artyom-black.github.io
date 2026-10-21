@@ -4,7 +4,7 @@
 [data-app="i-love-kanji"] .ilk-petals i{position:absolute;top:-20px;width:12px;height:9px;border-radius:12px 0 12px 0;background:#f6b7c9;opacity:.85;left:var(--x);animation:ilk-fall var(--t) linear var(--dl) infinite}
 @keyframes ilk-fall{to{transform:translate(var(--dx),110vh) rotate(540deg)}}
 [data-app="i-love-kanji"] .ilk-bloom{position:absolute;inset:0;background:#0b1022 url(background.webp) center/cover;clip-path:circle(0 at var(--cx,50%) var(--cy,50%))}
-[data-app="i-love-kanji"] .ilk-bloom::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--cx,50%) var(--cy,50%),rgba(246,183,201,.55),rgba(246,183,201,0) 45%)}
+[data-app="i-love-kanji"] .ilk-bloom::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--cx,50%) var(--cy,50%),rgba(238,34,41,.5),rgba(238,34,41,0) 45%)}
 [data-app="i-love-kanji"].opening .ilk-bloom{animation:ilk-bloom .8s var(--ease) forwards,ilk-fade .5s 1.1s forwards}
 @keyframes ilk-bloom{to{clip-path:circle(150% at var(--cx,50%) var(--cy,50%))}}
 @keyframes ilk-fade{to{opacity:0}}
