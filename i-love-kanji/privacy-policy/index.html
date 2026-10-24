@@ -1,914 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Privacy Policy for this app. The other document is at ../terms-of-service/ -->
+  <!-- Privacy Policy for I Love Kanji. The other document is at ../terms-of-service/
+       Styles and scripts for both pages: ../assets/legal.css and ../assets/legal.js -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta
-    name="description"
-    content="Official Privacy Policy and Terms of Service for the I Love Kanji mobile application."
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#fcfbf9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1f1f22" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="How the I Love Kanji app handles your information: what stays on your phone, analytics, purchases and your choices." />
   <title>I Love Kanji — Privacy Policy</title>
-
-  <style>
-    :root {
-      --black: #000000;
-      --white: #ffffff;
-      --max: 780px;
-      --serif: Georgia, "Times New Roman", Times, serif;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      background: var(--white);
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      margin: 0;
-      color: var(--black);
-      background: var(--white);
-      font-family: var(--serif);
-      font-size: 17px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: var(--black);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      overflow-wrap: anywhere;
-    }
-
-    a:hover { text-decoration-thickness: 2px; }
-
-    :focus-visible {
-      outline: 2px solid var(--black);
-      outline-offset: 2px;
-    }
-
-    /* Header */
-
-    .site-header {
-      border-bottom: 2px solid var(--black);
-      background: var(--white);
-    }
-
-    .header-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 18px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      color: var(--black);
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .nav-link,
-    .nav-button {
-      display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid var(--black);
-      color: var(--black);
-      background: var(--white);
-      font: inherit;
-      font-size: 15px;
-      line-height: 1.4;
-      text-decoration: none;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .nav-link:hover,
-    .nav-button:hover { text-decoration: underline; }
-
-    .nav-link.active {
-      color: var(--white);
-      background: var(--black);
-    }
-
-    /* Document */
-
-    .page {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 40px auto 56px;
-    }
-
-    .doc { display: none; }
-    .doc.active { display: block; }
-
-    .doc-header {
-      padding-bottom: 20px;
-      margin-bottom: 28px;
-      border-bottom: 1px solid var(--black);
-    }
-
-    .doc-kicker {
-      margin: 0 0 6px;
-      font-size: 13px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .doc h1 {
-      margin: 0 0 12px;
-      font-size: clamp(30px, 6vw, 40px);
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .dates {
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .lead { margin: 18px 0 0; }
-
-    .summary {
-      margin: 0 0 32px;
-      padding: 18px 20px;
-      border: 2px solid var(--black);
-    }
-
-    .summary h2 {
-      margin: 0 0 8px;
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .summary p { margin: 0; }
-
-    .doc h2.section {
-      margin: 36px 0 10px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .doc h3 {
-      margin: 22px 0 6px;
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    p { margin: 10px 0; }
-
-    ul {
-      margin: 10px 0;
-      padding-left: 26px;
-    }
-
-    li { margin: 6px 0; }
-
-    .table-wrap {
-      overflow-x: auto;
-      margin: 16px 0 24px;
-      border: 1px solid var(--black);
-    }
-
-    table {
-      width: 100%;
-      min-width: 640px;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 12px 14px;
-      text-align: left;
-      vertical-align: top;
-      border-bottom: 1px solid var(--black);
-      font-size: 15px;
-    }
-
-    th {
-      border-bottom-width: 2px;
-      font-weight: 700;
-    }
-
-    tr:last-child td { border-bottom: 0; }
-
-    .notice {
-      margin: 24px 0;
-      padding: 4px 0 4px 18px;
-      border-left: 3px solid var(--black);
-    }
-
-    .license {
-      margin: 18px 0;
-      padding: 16px 18px;
-      border: 1px solid var(--black);
-    }
-
-    .license h3 { margin-top: 0; }
-
-    .license p {
-      margin: 6px 0;
-      font-size: 15.5px;
-    }
-
-    .contact-block {
-      margin-top: 20px;
-      padding: 16px 18px;
-      border: 2px solid var(--black);
-    }
-
-    .contact-block .label {
-      display: block;
-      font-size: 13px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .contact-block a {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    footer {
-      margin-top: 48px;
-      padding-top: 18px;
-      border-top: 1px solid var(--black);
-      font-size: 14px;
-      text-align: center;
-    }
-
-    /* Contact form */
-
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 150;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    .modal-backdrop.open { display: flex; }
-
-    .modal {
-      width: min(520px, 100%);
-      max-height: calc(100vh - 32px);
-      overflow-y: auto;
-      border: 2px solid var(--black);
-      background: var(--white);
-    }
-
-    .modal-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 20px 22px 10px;
-      border-bottom: 1px solid var(--black);
-    }
-
-    .modal-top h2 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .modal-top p {
-      margin: 4px 0 0;
-      font-size: 14px;
-    }
-
-    .modal-close {
-      flex: 0 0 auto;
-      width: 36px;
-      height: 36px;
-      border: 1px solid var(--black);
-      color: var(--black);
-      background: var(--white);
-      font-size: 22px;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .modal-form { padding: 6px 22px 22px; }
-
-    label {
-      display: block;
-      margin: 14px 0 6px;
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    input, textarea {
-      width: 100%;
-      border: 1px solid var(--black);
-      border-radius: 0;
-      color: var(--black);
-      background: var(--white);
-      padding: 11px 12px;
-      font: inherit;
-      font-size: 16px;
-    }
-
-    input:focus, textarea:focus {
-      outline: 2px solid var(--black);
-      outline-offset: 0;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .form-status {
-      display: none;
-      margin-top: 12px;
-      padding: 10px 12px;
-      border: 1px solid var(--black);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .submit-btn {
-      width: 100%;
-      margin-top: 18px;
-      border: 2px solid var(--black);
-      border-radius: 0;
-      color: var(--white);
-      background: var(--black);
-      padding: 12px 16px;
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover { text-decoration: underline; }
-    .submit-btn:disabled { cursor: wait; }
-
-    .form-note {
-      margin: 10px 0 0;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 600px) {
-      body { font-size: 16px; }
-      .page { margin-top: 28px; }
-      .nav-link, .nav-button { font-size: 14px; padding: 6px 10px; }
-    }
-
-    @media print {
-      .site-header, .modal-backdrop { display: none !important; }
-      .doc { display: block !important; page-break-after: always; }
-    }
-  </style>
+  <link rel="icon" href="../assets/icon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Montserrat:wght@700;800&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&amp;text=%E5%AE%88%E7%B4%84&amp;display=swap" />
+  <link rel="stylesheet" href="../assets/legal.css" />
 </head>
-
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="../privacy-policy/">I Love Kanji</a>
-      <nav class="nav" aria-label="Legal documents">
-        <a class="nav-link active" id="privacyNav" aria-current="page" href="../privacy-policy/">Privacy Policy</a>
-        <a class="nav-link" id="termsNav" href="../terms-of-service/">Terms of Service</a>
-        <button class="nav-button" id="openChat" type="button">Contact</button>
-      </nav>
-    </div>
+<body data-doc="privacy">
+  <header class="topbar">
+    <a class="brand" href="../"><img src="../assets/icon.webp" alt="" width="32" height="32" />I Love Kanji</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="side" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Sections</button>
   </header>
+  <div class="scrim" id="scrim"></div>
 
-  <main class="page">
+  <div class="shell">
+    <aside class="side" id="side" aria-label="Legal documents and sections">
+      <a class="brand" href="../"><img src="../assets/icon.webp" alt="" width="40" height="40" />I Love Kanji</a>
+      <nav class="switch" aria-label="Legal documents">
+        <a href="../privacy-policy/" aria-current="page">Privacy Policy</a>
+        <a href="../terms-of-service/">Terms of Service</a>
+      </nav>
+      <nav aria-label="Sections of the Privacy Policy">
+        <ol class="toc">
+          <li><a href="#scope"><span class="n">1</span><span>What this policy covers</span></a></li>
+          <li><a href="#what-we-collect"><span class="n">2</span><span>What the app handles</span></a></li>
+          <li><a href="#on-your-phone"><span class="n">3</span><span>What stays on your phone</span></a></li>
+          <li><a href="#android-backup"><span class="n">4</span><span>Android backup</span></a></li>
+          <li><a href="#analytics"><span class="n">5</span><span>Firebase Analytics</span></a></li>
+          <li><a href="#purchases"><span class="n">6</span><span>Purchases and subscriptions</span></a></li>
+          <li><a href="#google-play"><span class="n">7</span><span>App updates and ratings</span></a></li>
+          <li><a href="#phone-features"><span class="n">8</span><span>Notifications and phone features</span></a></li>
+          <li><a href="#not-collected"><span class="n">9</span><span>What we don't collect</span></a></li>
+          <li><a href="#how-we-use"><span class="n">10</span><span>How we use information</span></a></li>
+          <li><a href="#legal-bases"><span class="n">11</span><span>Legal bases</span></a></li>
+          <li><a href="#sharing"><span class="n">12</span><span>Who we share it with</span></a></li>
+          <li><a href="#keeping-deleting"><span class="n">13</span><span>How long we keep it and how to delete it</span></a></li>
+          <li><a href="#your-rights"><span class="n">14</span><span>Your rights</span></a></li>
+          <li><a href="#security"><span class="n">15</span><span>Security</span></a></li>
+          <li><a href="#international"><span class="n">16</span><span>International transfers</span></a></li>
+          <li><a href="#children"><span class="n">17</span><span>Children</span></a></li>
+          <li><a href="#other-sites"><span class="n">18</span><span>Links to other sites</span></a></li>
+          <li><a href="#changes"><span class="n">19</span><span>Changes to this policy</span></a></li>
+          <li><a href="#contact"><span class="n">20</span><span>Contact us</span></a></li>
+        </ol>
+      </nav>
+      <p class="side-foot">Last updated October 24, 2026</p>
+    </aside>
 
-    <!-- ===================== PRIVACY POLICY ===================== -->
-    <article class="doc active" id="privacyPanel" aria-labelledby="privacyTitle">
-      <header class="doc-header">
-        <p class="doc-kicker">I Love Kanji</p>
-        <h1 id="privacyTitle">Privacy Policy</h1>
-        <p class="dates">Effective date: October 17, 2026 &nbsp;·&nbsp; Last updated: October 17, 2026</p>
-        <p class="lead">
-          This Privacy Policy explains how the developer of <strong>I Love Kanji</strong>
-          ("I Love Kanji," "we," "us," or "our") handles information in connection with the
-          I Love Kanji mobile application for Android (the "App").
+    <main>
+      <article class="doc" id="privacy-policy" aria-labelledby="docTitle">
+        <header class="doc-head">
+          <div class="seal" aria-hidden="true">守</div>
+          <div>
+            <h1 id="docTitle">Privacy Policy</h1>
+            <p class="dates">Updated October 24, 2026</p>
+          </div>
+        </header>
+
+        <p class="intro">
+          This policy explains what information the <strong>I Love Kanji</strong> app for Android (the "app")
+          and this website handle, why, and what you can do about it. "We" and "us" means the developer of I Love Kanji.
         </p>
-      </header>
 
-      <section class="summary" aria-labelledby="privacySummary">
-        <h2 id="privacySummary">Summary</h2>
+        <section class="glance" aria-labelledby="glance">
+          <h2 id="glance">The short version</h2>
+          <ul>
+            <li>No account, no sign-up and no ads.</li>
+            <li>Your progress, stories, settings and lock screen photo are saved on your phone.</li>
+            <li>If Android backup is on, your phone copies that data into your own Google account backup so you can get it back on a new phone.</li>
+            <li>We use Google Firebase Analytics to see how the app is used. It never receives the text of your stories or your photos.</li>
+            <li>Payments for Monthly, Yearly and Lifetime are handled by Google Play. We never see your card details.</li>
+            <li>We don't sell your information.</li>
+          </ul>
+        </section>
+
+        <h2 class="sec" id="scope"><span class="n">1.</span><span>What this policy covers</span></h2>
         <p>
-          The App does not require an account and does not show ads. Your learning progress,
-          stories, streaks, settings, purchase receipt, and any photo you choose for the lock
-          screen are stored on your device. The App uses Google Firebase Analytics to understand
-          how the App is used, and Google Play Billing for the optional one-time N4–N1 unlock.
-          We do not send the text of your stories or your photos to anyone, and we do not sell
-          your personal information.
+          This policy applies to the app and to this website. It doesn't cover how Google, your phone maker,
+          or other companies handle information under their own policies.
         </p>
-      </section>
 
-      <h2 class="section">1. Scope</h2>
-      <p>
-        This Privacy Policy applies to information handled through the App and through this
-        website. It does not govern the independent privacy practices of Google, device
-        manufacturers, app stores, operating systems, or other third-party services used in
-        connection with the App.
-      </p>
+        <h2 class="sec" id="what-we-collect"><span class="n">2.</span><span>What the app handles</span></h2>
+        <div class="table">
+          <table>
+            <thead>
+              <tr><th scope="col">Type</th><th scope="col">What it includes</th><th scope="col">Why</th><th scope="col">Where it's kept</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Learning progress</td>
+                <td>Kanji you've learned, reviews, mistakes, daily goal and level, streak, best streak and streak freezes</td>
+                <td>To run your lessons, reviews and streak</td>
+                <td>On your phone, and in your Android backup if it's on</td>
+              </tr>
+              <tr>
+                <td>Your stories</td>
+                <td>Memory stories you write for kanji</td>
+                <td>So you can see and edit them later</td>
+                <td>On your phone, and in your Android backup if it's on. Never sent to us or to analytics</td>
+              </tr>
+              <tr>
+                <td>Lock screen photo (optional)</td>
+                <td>One photo you pick as the background for Lock Screen Kanji</td>
+                <td>To show your kanji on that background</td>
+                <td>On your phone, and in your Android backup if it's on. Never sent to us or to analytics</td>
+              </tr>
+              <tr>
+                <td>Settings</td>
+                <td>App language, dark mode, sound effects, reminder and lock screen settings, the date you accepted these documents, and whether you've already seen the update and rating prompts</td>
+                <td>To remember your choices</td>
+                <td>On your phone, and in your Android backup if it's on</td>
+              </tr>
+              <tr>
+                <td>Purchases</td>
+                <td>Which plan you have (Monthly, Yearly or Lifetime), purchase status, the Google-signed receipt and purchase token</td>
+                <td>To unlock N4–N1, check that a subscription is still active, and restore purchases</td>
+                <td>Google Play, and a copy of the receipt on your phone</td>
+              </tr>
+              <tr>
+                <td>Usage and device information</td>
+                <td>App events (listed in section 5), sessions, app version, phone model, Android version, an app instance ID, the Android Advertising ID, and rough location (like country or city) worked out from your IP address</td>
+                <td>To understand how the app is used and make it better</td>
+                <td>Google Firebase Analytics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <h2 class="section">2. Information handled by the App</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Category</th>
-              <th scope="col">Examples</th>
-              <th scope="col">Purpose</th>
-              <th scope="col">Where it is handled</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Learning data</td>
-              <td>Progress, review status, streaks, daily goal, settings, lesson state</td>
-              <td>To provide lessons, reviews, and progress tracking</td>
-              <td>On your device only</td>
-            </tr>
-            <tr>
-              <td>Your stories</td>
-              <td>Stories or memory aids you write for kanji</td>
-              <td>To personalize your learning</td>
-              <td>On your device only; the text is never sent to analytics</td>
-            </tr>
-            <tr>
-              <td>Lock screen photo (optional)</td>
-              <td>A photo you choose as the background of the lock screen kanji wallpaper</td>
-              <td>To display the lock screen wallpaper you set up</td>
-              <td>On your device only; never uploaded</td>
-            </tr>
-            <tr>
-              <td>Analytics and device data</td>
-              <td>App interactions and events, sessions, app version, device model, Android version,
-                app instance ID, Android Advertising ID, and approximate location (such as country
-                or city) derived from your IP address</td>
-              <td>To understand how the App is used and to improve it</td>
-              <td>Processed by Google Firebase Analytics</td>
-            </tr>
-            <tr>
-              <td>Purchase information</td>
-              <td>Product, purchase state, purchase token, acknowledgement status, and purchase
-                events made available by Google Play</td>
-              <td>To complete, verify, restore, and measure the optional one-time unlock</td>
-              <td>Processed by Google Play and Firebase Analytics; a signed receipt is stored on your device</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 class="section">3. Data stored on your device</h2>
-      <p>
-        The App stores your learning data locally on your device. This includes your kanji
-        progress, review history, saved stories, streak, preferences, and the purchase receipt
-        used to keep the paid content unlocked.
-      </p>
-      <p>
-        We do not send the text of your stories to Firebase Analytics or to any server. Analytics
-        only records whether a suggested story was used or a personal story was written, never
-        the story itself. If this changes in the future, we will update this Privacy Policy
-        before the change takes effect.
-      </p>
-
-      <h3>Lock screen kanji</h3>
-      <p>
-        If you turn on the lock screen kanji feature, the App sets up an Android wallpaper that
-        shows the kanji you are learning. If you choose your own background photo, you select it
-        through Android's built-in photo picker. The App only receives the one photo you select;
-        it does not request access to your photo library or storage. The App copies, rotates, and
-        resizes that photo and saves the copy inside the App's private storage on your device.
-        The photo is never uploaded, shared, or sent to analytics. You can replace it at any time,
-        and it is deleted when you clear the App's storage or uninstall the App.
-      </p>
-
-      <h2 class="section">4. Firebase Analytics</h2>
-      <p>
-        The App uses <strong>Google Firebase Analytics</strong>, provided by Google, to measure how
-        the App is used and to improve its stability, usability, and features. Firebase Analytics
-        processes this information on our behalf.
-      </p>
-      <p>
-        The App records the following kinds of events: starting or completing a JLPT level,
-        selected N5 learning milestones, completing a story, flashcard, or quiz lesson, whether
-        a suggested or personal story was used (without the story text), reminder screens and
-        the reminder bell, the notification permission result, turning on the lock screen kanji,
-        opening the purchase screen, and purchase attempts, cancellations, and failures.
-        The App does not set your name, email address, or any account identifier as a user ID.
-      </p>
-      <p>
-        Firebase Analytics also collects certain information automatically, such as first open,
-        sessions, engagement time, app and device information, an app instance ID, approximate
-        location derived from your IP address, how the App was installed (install source), and
-        supported Google Play purchase events.
-      </p>
-      <p>
-        <strong>Advertising ID.</strong> The App does not show ads. However, the Firebase Analytics
-        software may access your device's Android Advertising ID. We use this information only
-        for analytics and never for advertising, ad targeting, or ad measurement. You can reset
-        or delete your Advertising ID at any time in your Android device settings.
-      </p>
-      <p>
-        Google processes this information under its own terms and privacy documentation. See
-        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>,
-        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a>,
-        and the
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
-      </p>
-
-      <h2 class="section">5. Purchases and Google Play services</h2>
-      <p>
-        The App offers an optional one-time purchase that unlocks additional learning content
-        through <strong>Google Play Billing</strong>. Google Play processes the payment. We do not
-        receive or store your card number, bank details, or other payment credentials.
-      </p>
-      <p>
-        Google Play makes purchase and entitlement information available to the App so that paid
-        content can be unlocked, verified, and restored. The App may also show Google Play's
-        in-app review prompt, which lets you rate the App without leaving it. That prompt is run
-        by Google; we do not receive your Google account details through it. Google's handling of
-        payment, review, and account information is governed by Google's own terms and privacy
-        policies.
-      </p>
-
-      <h2 class="section">6. Notifications and device features</h2>
-      <p>
-        The App asks for Android notification permission only after you choose to turn reminders
-        on. Reminders are scheduled locally on your device, not through an I Love Kanji server.
-        To keep reminders on time, the App reschedules them after a device restart, a time or time
-        zone change, or an App update.
-      </p>
-      <p>
-        You can turn reminders off in the App or in your device settings. The App also uses
-        vibration for learning feedback, such as answer and completion feedback.
-      </p>
-
-      <h2 class="section">7. Information we do not request</h2>
-      <p>
-        The App does not require an account and does not request access to your contacts, call
-        logs, SMS messages, microphone, camera, precise location, or photo library or storage for
-        its normal use.
-      </p>
-
-      <h2 class="section">8. How information is used</h2>
-      <p>Information described in this Privacy Policy is used to:</p>
-      <ul>
-        <li>provide lessons, reviews, streaks, progress tracking, audio, reminders, and the lock screen feature;</li>
-        <li>remember your settings and learning state on your device;</li>
-        <li>process, verify, and restore purchased access through Google Play;</li>
-        <li>measure App usage and improve performance, usability, and features;</li>
-        <li>detect, investigate, and fix technical problems, abuse, or security issues; and</li>
-        <li>comply with applicable legal obligations.</li>
-      </ul>
-
-      <h2 class="section">9. Legal bases for processing</h2>
-      <p>
-        Where the law requires a legal basis for processing personal information (for example, in
-        the European Economic Area and the United Kingdom), we rely on:
-      </p>
-      <ul>
-        <li><strong>performance of a contract</strong>, to provide the App and any content you purchase;</li>
-        <li><strong>legitimate interests</strong>, to understand App usage, fix problems, and improve the App, in a way that does not override your rights;</li>
-        <li><strong>consent</strong>, for notifications, which you can withdraw at any time in the App or your device settings; and</li>
-        <li><strong>legal obligations</strong>, where we must process information to comply with the law.</li>
-      </ul>
-
-      <h2 class="section">10. Sharing and disclosure</h2>
-      <p>
-        We do <strong>not sell</strong> your personal information, and we do not share it for
-        advertising. The App contains no advertising software and does not operate its own
-        account or cloud-sync service. Information is processed by service providers that help
-        us operate the App and this website: Google (Firebase Analytics and Google Play), and
-        FormSubmit when you use the contact form on this website.
-      </p>
-      <p>
-        We may also disclose information if reasonably necessary to comply with applicable law,
-        legal process, or enforceable government requests, or to protect legal rights, safety,
-        security, or the integrity of the App.
-      </p>
-
-      <h2 class="section">11. Data retention and deletion</h2>
-      <p>
-        Data stored on your device remains there until you clear the App's storage or uninstall
-        the App. The App does not allow Android to back up its data to the cloud, so this data is
-        not copied to your Google account backup.
-      </p>
-      <p>
-        Data processed by Firebase Analytics and Google Play is retained according to their
-        applicable settings and retention policies. Uninstalling the App resets the Firebase app
-        instance ID, and you can reset or delete your Advertising ID in your device settings.
-      </p>
-      <div class="notice">
+        <h2 class="sec" id="on-your-phone"><span class="n">3.</span><span>What stays on your phone</span></h2>
         <p>
-          Because I Love Kanji has no user accounts, there is no account to delete. To remove all
-          data stored by the App, clear the App's storage or uninstall the App. For any other
-          privacy request, contact us at the email address below.
+          Everything you do while learning is saved in the app's private storage on your phone. We don't run
+          a server that stores your progress, and we can't see it.
         </p>
-      </div>
-
-      <h2 class="section">12. Your privacy rights</h2>
-      <p>
-        Depending on where you live, you may have rights to access, correct, delete, restrict, or
-        object to the processing of your personal information, to data portability, and to
-        complain to a data protection authority. These rights are subject to applicable legal
-        requirements and exceptions.
-      </p>
-      <p>
-        Because the App has no accounts, we may not be able to link analytics information to a
-        particular person. We will still respond to every legitimate privacy request as required
-        by applicable law.
-      </p>
-
-      <h2 class="section">13. Security</h2>
-      <p>
-        Information sent by the App to Firebase Analytics and Google Play is encrypted in transit.
-        We use reasonable safeguards appropriate to the nature of the App and the information
-        handled. However, no mobile application, storage system, network transmission, or
-        third-party service can be guaranteed to be completely secure.
-      </p>
-
-      <h2 class="section">14. International processing</h2>
-      <p>
-        Our service providers may process information in countries other than the country where
-        you live. Their processing is governed by their own privacy practices and the legal
-        safeguards that apply to them.
-      </p>
-
-      <h2 class="section">15. Children's privacy</h2>
-      <p>
-        The App is not directed to children under 13. The App does not ask for a name, email
-        address, or account to use its learning features, and we do not knowingly collect
-        personal information from children under 13 (or the minimum age required in your
-        country). If you are a parent or guardian and believe a child has provided personal
-        information through the App or this website, contact us and we will take appropriate steps.
-      </p>
-
-      <h2 class="section">16. Third-party links and services</h2>
-      <p>
-        The App and this website contain links to third-party websites and services. We are not
-        responsible for the content, security, or privacy practices of those third parties.
-      </p>
-
-      <h2 class="section">17. Changes to this Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy when the App, its services, or legal requirements change.
-        The updated Policy will be posted on this page with a new "last updated" date. Where
-        appropriate, material changes will also be announced in the App or on its store listing.
-      </p>
-
-      <h2 class="section">18. Contact and support messages</h2>
-      <p>
-        For privacy questions, requests, or concerns, contact us at the email address below or use
-        the contact form on this website.
-      </p>
-      <p>
-        If you use the contact form, the email address you enter, your message, and basic
-        submission information are sent to <strong>FormSubmit</strong>, a third-party form-delivery
-        service, which forwards the message to <strong>support.artyomblack@gmail.com</strong>.
-        FormSubmit states that it keeps form submissions for up to 30 days. FormSubmit's own terms
-        and privacy practices apply to its processing; see
-        <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">formsubmit.co</a>.
-      </p>
-      <p>
-        We use contact information only to receive, review, and respond to your message and to keep
-        reasonable records of support, legal, and privacy correspondence. Please do not include
-        sensitive personal information unless it is necessary for your request.
-      </p>
-      <div class="contact-block">
-        <span class="label">Privacy contact</span>
-        <a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a>
-      </div>
-    </article>
-
-    <!-- ===================== TERMS OF SERVICE ===================== -->
-    <article class="doc" id="termsPanel" aria-labelledby="termsTitle"></article>
-
-    <footer>
-      <p><strong>Audio credit: VOICEVOX:四国めたん</strong></p>
-      <p>© 2026 I Love Kanji. All rights reserved, except third-party materials used under their own licenses.</p>
-    </footer>
-  </main>
-
-  <!-- ===================== CONTACT FORM ===================== -->
-  <div class="modal-backdrop" id="chatModal" aria-hidden="true">
-    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-      <div class="modal-top">
-        <div>
-          <h2 id="contactTitle">Contact I Love Kanji</h2>
-          <p>Send a support, legal, or privacy message.</p>
-        </div>
-        <button class="modal-close" id="closeChat" type="button" aria-label="Close contact form">×</button>
-      </div>
-
-      <form class="modal-form" id="contactForm" novalidate>
-        <label for="senderEmail">Your email address</label>
-        <input
-          id="senderEmail"
-          name="email"
-          type="email"
-          inputmode="email"
-          autocomplete="email"
-          placeholder="you@example.com"
-          required
-        />
-
-        <label for="senderMessage">Message</label>
-        <textarea
-          id="senderMessage"
-          name="message"
-          placeholder="How can we help?"
-          required
-        ></textarea>
-
-        <input
-          type="text"
-          id="websiteField"
-          name="_honey"
-          tabindex="-1"
-          autocomplete="off"
-          aria-hidden="true"
-          style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;"
-        />
-
-        <div class="form-status" id="formError" role="alert">Enter a valid email address and a message.</div>
-
-        <button class="submit-btn" id="submitContact" type="submit">Send Message</button>
-        <p class="form-note">
-          Your email address and message are sent through our form-delivery provider, FormSubmit,
-          and forwarded to <strong>support.artyomblack@gmail.com</strong>. See Section 18 of the
-          Privacy Policy. You stay on this page.
+        <p>
+          The text of your stories is never sent anywhere. Analytics only records that you wrote your own story
+          or used the suggested one, never what the story says. If that ever changes, we'll update this policy first.
         </p>
-        <div class="form-status" id="formSuccess" role="status">
-          Message sent. We received your request.
+        <h3>Lock Screen Kanji photo</h3>
+        <p>
+          If you choose your own background photo, you pick it with Android's built-in photo picker. The app only
+          gets the one photo you pick. It doesn't ask for access to your gallery or storage. The app turns the
+          photo upright, makes it smaller, and saves a copy in its own storage. You can change it any time.
+          It's removed when you clear the app's data or uninstall the app (see section 4 about Android backup).
+        </p>
+
+        <h2 class="sec" id="android-backup"><span class="n">4.</span><span>Android backup</span></h2>
+        <p>
+          The app allows Android's built-in <strong>Auto Backup</strong>. If backup is turned on for your phone,
+          Android copies the app's data about once a day to the backup in <strong>your own Google account</strong>.
+          This includes your progress, stories, settings, lock screen photo and purchase receipts. It's stored as
+          hidden app data, not as files in your Google Drive, and we can't open it.
+        </p>
+        <p>
+          This lets Android put your progress back if you reinstall the app or move to a new phone with the same
+          Google account. Google handles this backup under the
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+          You can turn backup off or delete backups in your phone's settings and your Google account settings.
+        </p>
+
+        <h2 class="sec" id="analytics"><span class="n">5.</span><span>Firebase Analytics</span></h2>
+        <p>
+          We use <strong>Google Firebase Analytics</strong> to understand which features people use and where
+          the app can be better. Google processes this information for us.
+        </p>
+        <p>The app sends events like these:</p>
+        <ul>
+          <li><strong>Learning:</strong> starting or finishing a JLPT level, N5 milestones, finishing a Story, Flashcard or Quiz lesson, and whether you wrote your own story or used the suggested one (never the story text).</li>
+          <li><strong>Reminders:</strong> your answer to Android's notification permission, the "turn on reminders" screen being shown and your answer, and turning the reminder switch on or off.</li>
+          <li><strong>Purchases:</strong> opening the purchase page, starting, cancelling or failing a checkout, a completed purchase or free trial (with the plan), and restored purchases.</li>
+          <li><strong>Other:</strong> the update pop-up and your answer, setting Lock Screen Kanji, and resetting your progress.</li>
+        </ul>
+        <p>
+          Firebase also collects some things on its own, such as first open, sessions, time in the app, app updates
+          and removals, device and app information, an app instance ID, rough location from your IP address, how the
+          app was installed, and Google Play purchases. If you're offline, events wait on your phone and are sent later.
+          The app doesn't give Firebase your name, email or any account ID.
+        </p>
+        <p>
+          <strong>Advertising ID.</strong> The app shows no ads, but Firebase may read your phone's Android Advertising ID.
+          We use it only for analytics, never for ads. You can reset or delete it in your phone's settings.
+        </p>
+        <p>
+          More from Google:
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase privacy and security</a>,
+          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">how Google uses information from apps that use its services</a>,
+          and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+        </p>
+
+        <h2 class="sec" id="purchases"><span class="n">6.</span><span>Purchases and subscriptions</span></h2>
+        <p>
+          N5 is free. N4 to N1 unlock with a <strong>Monthly</strong> or <strong>Yearly</strong> subscription
+          (Yearly may include a free trial) or a one-time <strong>Lifetime</strong> purchase. All payments go through
+          <strong>Google Play Billing</strong>. Google handles the payment, and we never receive your card or bank details.
+        </p>
+        <p>
+          Google Play tells the app which plan you have and gives it a signed receipt, which the app checks on your phone
+          and saves so paid levels work offline. Each time the app opens with an internet connection, it asks Google Play
+          whether your subscription is still active. Prices, sales and free trials shown in the app come from Google Play.
+        </p>
+
+        <h2 class="sec" id="google-play"><span class="n">7.</span><span>App updates and ratings</span></h2>
+        <p>
+          The app uses Google Play to check whether a newer version is available and, if you agree, to download and install it.
+          It may also show Google Play's rating card after you've learned 15 and 35 kanji. Both are run by Google.
+          We don't get your Google account details from them, and Google doesn't tell us whether you left a rating.
+        </p>
+
+        <h2 class="sec" id="phone-features"><span class="n">8.</span><span>Notifications and phone features</span></h2>
+        <ul>
+          <li><strong>Notifications.</strong> The app only asks for notification permission after you turn reminders on. Reminders (at 12:00 and 19:00 your time) are scheduled on your phone, not sent from a server. They use your streak and next kanji, which stay on your phone.</li>
+          <li><strong>Restart and time changes.</strong> The app reschedules reminders after your phone restarts, the time or time zone changes, or the app updates.</li>
+          <li><strong>Vibration</strong> for answer and lesson feedback.</li>
+          <li><strong>Internet</strong> for analytics, Google Play purchases and update checks.</li>
+          <li><strong>Lock Screen Kanji</strong> uses Android's live wallpaper. You set it yourself in Android's wallpaper screen.</li>
+        </ul>
+        <p>You can turn reminders off in the app or in your phone's settings.</p>
+
+        <h2 class="sec" id="not-collected"><span class="n">9.</span><span>What we don't collect</span></h2>
+        <p>
+          The app doesn't ask for an account, and it doesn't access your contacts, calls, text messages, microphone,
+          camera, precise location, or your photo gallery.
+        </p>
+
+        <h2 class="sec" id="how-we-use"><span class="n">10.</span><span>How we use information</span></h2>
+        <ul>
+          <li>to run lessons, reviews, streaks, audio, reminders and Lock Screen Kanji;</li>
+          <li>to remember your settings and progress;</li>
+          <li>to process, check and restore purchases and subscriptions through Google Play;</li>
+          <li>to understand how the app is used and improve it;</li>
+          <li>to find and fix bugs, misuse and security problems;</li>
+          <li>to answer your messages; and</li>
+          <li>to follow the law.</li>
+        </ul>
+
+        <h2 class="sec" id="legal-bases"><span class="n">11.</span><span>Legal bases</span></h2>
+        <p>Where the law asks for a legal reason to use personal information (for example in the EU and UK), we rely on:</p>
+        <ul>
+          <li><strong>contract</strong>, to provide the app and anything you buy;</li>
+          <li><strong>legitimate interests</strong>, to understand how the app is used, fix problems and improve it, without overriding your rights;</li>
+          <li><strong>consent</strong>, for notifications, which you can take back any time; and</li>
+          <li><strong>legal obligations</strong>, when the law requires it.</li>
+        </ul>
+
+        <h2 class="sec" id="sharing"><span class="n">12.</span><span>Who we share it with</span></h2>
+        <p>
+          We <strong>don't sell</strong> your personal information or share it for advertising. The app has no ad software.
+          Information is handled by these service providers:
+        </p>
+        <ul>
+          <li><strong>Google</strong>, for Firebase Analytics, Google Play purchases, updates and ratings, and Android backup;</li>
+          <li><strong>FormSubmit</strong>, which delivers messages you send through the chat on this website.</li>
+        </ul>
+        <p>
+          We may also share information if the law requires it, or to protect people's safety, our rights, or the app.
+        </p>
+
+        <h2 class="sec" id="keeping-deleting"><span class="n">13.</span><span>How long we keep it and how to delete it</span></h2>
+        <ul>
+          <li><strong>Start over:</strong> Settings → Reset progress deletes your learned kanji, stories, reviews and streak. Your purchase stays.</li>
+          <li><strong>Delete everything on your phone:</strong> clear the app's storage or uninstall the app.</li>
+          <li><strong>Android backup:</strong> delete it or turn it off in your phone's backup settings or your Google account.</li>
+          <li><strong>Analytics:</strong> kept by Firebase according to its retention settings. Uninstalling resets the app instance ID, and you can reset your Advertising ID in your phone's settings.</li>
+          <li><strong>Subscriptions:</strong> cancel any time in Google Play → Payments &amp; subscriptions, or in the app under Settings → Manage subscription.</li>
+        </ul>
+        <div class="note">
+          <p>There's no I Love Kanji account, so there's no account to delete. For any other privacy request, send us a message (see section 20).</p>
         </div>
-      </form>
-    </section>
+
+        <h2 class="sec" id="your-rights"><span class="n">14.</span><span>Your rights</span></h2>
+        <p>
+          Depending on where you live, you may have the right to access, correct, delete or move your information,
+          to limit or object to how it's used, and to complain to your data protection authority.
+        </p>
+        <p>
+          Because there are no accounts, we may not be able to link analytics data to you. We'll still answer every
+          real privacy request as the law requires.
+        </p>
+
+        <h2 class="sec" id="security"><span class="n">15.</span><span>Security</span></h2>
+        <p>
+          Information sent to Firebase and Google Play is encrypted in transit. We take reasonable care to protect
+          information, but no app, network or service can be 100% secure.
+        </p>
+
+        <h2 class="sec" id="international"><span class="n">16.</span><span>International transfers</span></h2>
+        <p>
+          Our service providers may handle information in other countries than yours, under their own safeguards
+          and the laws that apply to them.
+        </p>
+
+        <h2 class="sec" id="children"><span class="n">17.</span><span>Children</span></h2>
+        <p>
+          The app isn't made for children under 13. It doesn't ask for a name, email or account, and we don't knowingly
+          collect personal information from children under 13 (or the minimum age in your country). If you're a parent
+          and think your child sent us personal information, message us and we'll take care of it.
+        </p>
+
+        <h2 class="sec" id="other-sites"><span class="n">18.</span><span>Links to other sites</span></h2>
+        <p>
+          The app and this website link to other websites and services. We're not responsible for what they do with your information.
+        </p>
+
+        <h2 class="sec" id="changes"><span class="n">19.</span><span>Changes to this policy</span></h2>
+        <p>
+          When the app or the law changes, we'll update this policy and change the "Last updated" date at the top.
+          For important changes, we'll also let you know in the app or on the Google Play page.
+        </p>
+
+        <h2 class="sec" id="contact"><span class="n">20.</span><span>Contact us</span></h2>
+        <p>
+          Have a question or a privacy request? Tap the red chat button in the bottom corner, or email
+          <a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a>.
+        </p>
+        <p>
+          Chat messages are delivered by <strong>FormSubmit</strong>, which forwards your email address and message to
+          support.artyomblack@gmail.com. FormSubmit says it keeps messages for up to 30 days; see
+          <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">formsubmit.co</a>.
+          We only use your email to reply and to keep a record of support and privacy conversations.
+          Please don't send sensitive personal information unless your request needs it.
+        </p>
+        <div class="contact">
+          <p><strong>Privacy contact</strong><br /><a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a></p>
+          <button class="btn" type="button" data-open-chat>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            Message us
+          </button>
+        </div>
+
+        <footer class="site-foot">
+          <p><strong>Audio credit: VOICEVOX:四国めたん</strong></p>
+          <p>© 2026 I Love Kanji. All rights reserved, except third-party materials used under their own licenses.</p>
+        </footer>
+      </article>
+    </main>
   </div>
 
-  <script>
-    (() => {
-      const privacyPanel = document.getElementById("privacyPanel");
-      const termsPanel = document.getElementById("termsPanel");
-      const privacyNav = document.getElementById("privacyNav");
-      const termsNav = document.getElementById("termsNav");
+  <button class="chat-fab" id="chatFab" type="button" aria-controls="chat" aria-expanded="false" aria-label="Message us"><svg class="bubble" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2.8"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
 
-      function normalizeHash() {
-        return "#privacy-policy";
-      }
+  <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chatTitle" aria-hidden="true">
+    <div class="chat-head">
+      <img src="../assets/icon.webp" alt="" width="38" height="38" />
+      <div><b id="chatTitle">I Love Kanji support</b><span>We reply by email</span></div>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="chat-log" id="chatLog" aria-live="polite">
+      <div class="msg them">Hi! Ask us anything about the app, a purchase or your privacy. We'll answer by email.</div>
+    </div>
+    <form class="chat-form" id="chatForm" novalidate>
+      <label class="sr" for="chatEmail">Your email</label>
+      <input id="chatEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email, so we can reply" required />
+      <div class="row">
+        <label class="sr" for="chatText">Message</label>
+        <textarea id="chatText" name="message" rows="1" placeholder="Write a message…" required></textarea>
+        <button class="send" id="chatSend" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+      </div>
+      <input class="hp" id="chatHp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <p class="chat-fine">Sent by FormSubmit to support.artyomblack@gmail.com. See the <a href="../privacy-policy/#contact">Privacy Policy</a>.</p>
+    </form>
+  </section>
 
-      function renderRoute() {
-        const route = normalizeHash();
-        const showTerms = route === "#terms-of-service";
-
-        privacyPanel.classList.toggle("active", !showTerms);
-        termsPanel.classList.toggle("active", showTerms);
-        privacyNav.classList.toggle("active", !showTerms);
-        termsNav.classList.toggle("active", showTerms);
-
-        if (showTerms) {
-          termsNav.setAttribute("aria-current", "page");
-          privacyNav.removeAttribute("aria-current");
-        } else {
-          privacyNav.setAttribute("aria-current", "page");
-          termsNav.removeAttribute("aria-current");
-        }
-
-        document.title = showTerms
-          ? "I Love Kanji — Terms of Service"
-          : "I Love Kanji — Privacy Policy";
-
-        window.scrollTo({ top: 0, behavior: "auto" });
-      }
-
-      renderRoute();
-
-      const modal = document.getElementById("chatModal");
-      const openButton = document.getElementById("openChat");
-      const closeButton = document.getElementById("closeChat");
-      const form = document.getElementById("contactForm");
-      const emailInput = document.getElementById("senderEmail");
-      const messageInput = document.getElementById("senderMessage");
-      const error = document.getElementById("formError");
-      const success = document.getElementById("formSuccess");
-      const submitButton = document.getElementById("submitContact");
-      const honeypot = document.getElementById("websiteField");
-
-      function openModal() {
-        modal.classList.add("open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-        setTimeout(() => emailInput.focus(), 40);
-      }
-
-      function closeModal() {
-        modal.classList.remove("open");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-        error.style.display = "none";
-        openButton.focus();
-      }
-
-      openButton.addEventListener("click", openModal);
-      closeButton.addEventListener("click", closeModal);
-
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) closeModal();
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && modal.classList.contains("open")) closeModal();
-      });
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const email = emailInput.value.trim();
-        const message = messageInput.value.trim();
-
-        error.style.display = "none";
-        success.style.display = "none";
-
-        if (!email || !message || !emailInput.checkValidity()) {
-          error.textContent = "Enter a valid email address and a message.";
-          error.style.display = "block";
-          return;
-        }
-
-        // Silently ignore obvious bot submissions.
-        if (honeypot && honeypot.value.trim() !== "") {
-          success.style.display = "block";
-          form.reset();
-          return;
-        }
-
-        const currentDocument =
-          normalizeHash() === "#terms-of-service" ? "Terms of Service" : "Privacy Policy";
-
-        const originalText = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending…";
-
-        try {
-          const response = await fetch(
-            "https://formsubmit.co/ajax/support.artyomblack@gmail.com",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-              },
-              body: JSON.stringify({
-                email: email,
-                _replyto: email,
-                _subject: "I Love Kanji Support",
-                page: currentDocument,
-                message: message,
-                _template: "table",
-                _captcha: "false"
-              })
-            }
-          );
-
-          const data = await response.json().catch(() => ({}));
-
-          if (!response.ok || data.success === "false" || data.success === false) {
-            throw new Error(data.message || "Unable to send message.");
-          }
-
-          form.reset();
-          success.textContent = "Message sent. We received your request.";
-          success.style.display = "block";
-        } catch (sendError) {
-          console.error(sendError);
-          error.textContent =
-            "Your message could not be sent. Please try again or email support.artyomblack@gmail.com.";
-          error.style.display = "block";
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = originalText;
-        }
-      });
-    })();
-  </script>
+  <script src="../assets/legal.js"></script>
 </body>
 </html>

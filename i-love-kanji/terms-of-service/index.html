@@ -1,1031 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Terms of Service for this app. The other document is at ../privacy-policy/ -->
+  <!-- Terms of Service for I Love Kanji. The other document is at ../privacy-policy/
+       Styles and scripts for both pages: ../assets/legal.css and ../assets/legal.js -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta
-    name="description"
-    content="Official Privacy Policy and Terms of Service for the I Love Kanji mobile application."
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#fcfbf9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1f1f22" media="(prefers-color-scheme: dark)" />
+  <meta name="description" content="The terms for using I Love Kanji, including the free N5 level, Monthly, Yearly and Lifetime plans, and third-party credits." />
   <title>I Love Kanji — Terms of Service</title>
-
-  <style>
-    :root {
-      --black: #000000;
-      --white: #ffffff;
-      --max: 780px;
-      --serif: Georgia, "Times New Roman", Times, serif;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      background: var(--white);
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      margin: 0;
-      color: var(--black);
-      background: var(--white);
-      font-family: var(--serif);
-      font-size: 17px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: var(--black);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      overflow-wrap: anywhere;
-    }
-
-    a:hover { text-decoration-thickness: 2px; }
-
-    :focus-visible {
-      outline: 2px solid var(--black);
-      outline-offset: 2px;
-    }
-
-    /* Header */
-
-    .site-header {
-      border-bottom: 2px solid var(--black);
-      background: var(--white);
-    }
-
-    .header-inner {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
-      padding: 18px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      color: var(--black);
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .nav-link,
-    .nav-button {
-      display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid var(--black);
-      color: var(--black);
-      background: var(--white);
-      font: inherit;
-      font-size: 15px;
-      line-height: 1.4;
-      text-decoration: none;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .nav-link:hover,
-    .nav-button:hover { text-decoration: underline; }
-
-    .nav-link.active {
-      color: var(--white);
-      background: var(--black);
-    }
-
-    /* Document */
-
-    .page {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 40px auto 56px;
-    }
-
-    .doc { display: none; }
-    .doc.active { display: block; }
-
-    .doc-header {
-      padding-bottom: 20px;
-      margin-bottom: 28px;
-      border-bottom: 1px solid var(--black);
-    }
-
-    .doc-kicker {
-      margin: 0 0 6px;
-      font-size: 13px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .doc h1 {
-      margin: 0 0 12px;
-      font-size: clamp(30px, 6vw, 40px);
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .dates {
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .lead { margin: 18px 0 0; }
-
-    .summary {
-      margin: 0 0 32px;
-      padding: 18px 20px;
-      border: 2px solid var(--black);
-    }
-
-    .summary h2 {
-      margin: 0 0 8px;
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .summary p { margin: 0; }
-
-    .doc h2.section {
-      margin: 36px 0 10px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .doc h3 {
-      margin: 22px 0 6px;
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    p { margin: 10px 0; }
-
-    ul {
-      margin: 10px 0;
-      padding-left: 26px;
-    }
-
-    li { margin: 6px 0; }
-
-    .table-wrap {
-      overflow-x: auto;
-      margin: 16px 0 24px;
-      border: 1px solid var(--black);
-    }
-
-    table {
-      width: 100%;
-      min-width: 640px;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 12px 14px;
-      text-align: left;
-      vertical-align: top;
-      border-bottom: 1px solid var(--black);
-      font-size: 15px;
-    }
-
-    th {
-      border-bottom-width: 2px;
-      font-weight: 700;
-    }
-
-    tr:last-child td { border-bottom: 0; }
-
-    .notice {
-      margin: 24px 0;
-      padding: 4px 0 4px 18px;
-      border-left: 3px solid var(--black);
-    }
-
-    .license {
-      margin: 18px 0;
-      padding: 16px 18px;
-      border: 1px solid var(--black);
-    }
-
-    .license h3 { margin-top: 0; }
-
-    .license p {
-      margin: 6px 0;
-      font-size: 15.5px;
-    }
-
-    .contact-block {
-      margin-top: 20px;
-      padding: 16px 18px;
-      border: 2px solid var(--black);
-    }
-
-    .contact-block .label {
-      display: block;
-      font-size: 13px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .contact-block a {
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    footer {
-      margin-top: 48px;
-      padding-top: 18px;
-      border-top: 1px solid var(--black);
-      font-size: 14px;
-      text-align: center;
-    }
-
-    /* Contact form */
-
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 150;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    .modal-backdrop.open { display: flex; }
-
-    .modal {
-      width: min(520px, 100%);
-      max-height: calc(100vh - 32px);
-      overflow-y: auto;
-      border: 2px solid var(--black);
-      background: var(--white);
-    }
-
-    .modal-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 20px 22px 10px;
-      border-bottom: 1px solid var(--black);
-    }
-
-    .modal-top h2 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .modal-top p {
-      margin: 4px 0 0;
-      font-size: 14px;
-    }
-
-    .modal-close {
-      flex: 0 0 auto;
-      width: 36px;
-      height: 36px;
-      border: 1px solid var(--black);
-      color: var(--black);
-      background: var(--white);
-      font-size: 22px;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .modal-form { padding: 6px 22px 22px; }
-
-    label {
-      display: block;
-      margin: 14px 0 6px;
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    input, textarea {
-      width: 100%;
-      border: 1px solid var(--black);
-      border-radius: 0;
-      color: var(--black);
-      background: var(--white);
-      padding: 11px 12px;
-      font: inherit;
-      font-size: 16px;
-    }
-
-    input:focus, textarea:focus {
-      outline: 2px solid var(--black);
-      outline-offset: 0;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .form-status {
-      display: none;
-      margin-top: 12px;
-      padding: 10px 12px;
-      border: 1px solid var(--black);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .submit-btn {
-      width: 100%;
-      margin-top: 18px;
-      border: 2px solid var(--black);
-      border-radius: 0;
-      color: var(--white);
-      background: var(--black);
-      padding: 12px 16px;
-      font: inherit;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover { text-decoration: underline; }
-    .submit-btn:disabled { cursor: wait; }
-
-    .form-note {
-      margin: 10px 0 0;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 600px) {
-      body { font-size: 16px; }
-      .page { margin-top: 28px; }
-      .nav-link, .nav-button { font-size: 14px; padding: 6px 10px; }
-    }
-
-    @media print {
-      .site-header, .modal-backdrop { display: none !important; }
-      .doc { display: block !important; page-break-after: always; }
-    }
-  </style>
+  <link rel="icon" href="../assets/icon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Montserrat:wght@700;800&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&amp;text=%E5%AE%88%E7%B4%84&amp;display=swap" />
+  <link rel="stylesheet" href="../assets/legal.css" />
 </head>
-
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="../privacy-policy/">I Love Kanji</a>
-      <nav class="nav" aria-label="Legal documents">
-        <a class="nav-link" id="privacyNav" href="../privacy-policy/">Privacy Policy</a>
-        <a class="nav-link active" id="termsNav" aria-current="page" href="../terms-of-service/">Terms of Service</a>
-        <button class="nav-button" id="openChat" type="button">Contact</button>
-      </nav>
-    </div>
+<body data-doc="terms">
+  <header class="topbar">
+    <a class="brand" href="../"><img src="../assets/icon.webp" alt="" width="32" height="32" />I Love Kanji</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="side" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Sections</button>
   </header>
+  <div class="scrim" id="scrim"></div>
 
-  <main class="page">
+  <div class="shell">
+    <aside class="side" id="side" aria-label="Legal documents and sections">
+      <a class="brand" href="../"><img src="../assets/icon.webp" alt="" width="40" height="40" />I Love Kanji</a>
+      <nav class="switch" aria-label="Legal documents">
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="../terms-of-service/" aria-current="page">Terms of Service</a>
+      </nav>
+      <nav aria-label="Sections of the Terms of Service">
+        <ol class="toc">
+          <li><a href="#accepting"><span class="n">1</span><span>Who can use the app</span></a></li>
+          <li><a href="#what-the-app-is"><span class="n">2</span><span>What the app is</span></a></li>
+          <li><a href="#license"><span class="n">3</span><span>Your license to use the app</span></a></li>
+          <li><a href="#your-content"><span class="n">4</span><span>Your stories and photos</span></a></li>
+          <li><a href="#free-and-paid"><span class="n">5</span><span>Free and paid content</span></a></li>
+          <li><a href="#subscriptions"><span class="n">6</span><span>Subscriptions and free trials</span></a></li>
+          <li><a href="#lifetime"><span class="n">7</span><span>Lifetime purchase</span></a></li>
+          <li><a href="#restoring"><span class="n">8</span><span>Restoring purchases</span></a></li>
+          <li><a href="#refunds"><span class="n">9</span><span>Refunds</span></a></li>
+          <li><a href="#acceptable-use"><span class="n">10</span><span>Fair use</span></a></li>
+          <li><a href="#our-content"><span class="n">11</span><span>Our content</span></a></li>
+          <li><a href="#third-party"><span class="n">12</span><span>Third-party content and licenses</span></a></li>
+          <li><a href="#privacy"><span class="n">13</span><span>Privacy</span></a></li>
+          <li><a href="#updates"><span class="n">14</span><span>Updates and availability</span></a></li>
+          <li><a href="#services"><span class="n">15</span><span>Third-party services</span></a></li>
+          <li><a href="#warranty"><span class="n">16</span><span>No warranty</span></a></li>
+          <li><a href="#liability"><span class="n">17</span><span>Limits on liability</span></a></li>
+          <li><a href="#suspension"><span class="n">18</span><span>Restricting access</span></a></li>
+          <li><a href="#changes"><span class="n">19</span><span>Changes to these terms</span></a></li>
+          <li><a href="#law"><span class="n">20</span><span>Governing law and disputes</span></a></li>
+          <li><a href="#severability"><span class="n">21</span><span>If part of these terms doesn't apply</span></a></li>
+          <li><a href="#no-waiver"><span class="n">22</span><span>No waiver</span></a></li>
+          <li><a href="#entire-agreement"><span class="n">23</span><span>Entire agreement</span></a></li>
+          <li><a href="#contact"><span class="n">24</span><span>Contact us</span></a></li>
+        </ol>
+      </nav>
+      <p class="side-foot">Last updated October 24, 2026</p>
+    </aside>
 
-    <!-- ===================== PRIVACY POLICY ===================== -->
-    <article class="doc" id="privacyPanel" aria-labelledby="privacyTitle"></article>
+    <main>
+      <article class="doc" id="terms-of-service" aria-labelledby="docTitle">
+        <header class="doc-head">
+          <div class="seal" aria-hidden="true">約</div>
+          <div>
+            <h1 id="docTitle">Terms of Service</h1>
+            <p class="dates">Updated October 24, 2026</p>
+          </div>
+        </header>
 
-    <!-- ===================== TERMS OF SERVICE ===================== -->
-    <article class="doc active" id="termsPanel" aria-labelledby="termsTitle">
-      <header class="doc-header">
-        <p class="doc-kicker">I Love Kanji</p>
-        <h1 id="termsTitle">Terms of Service</h1>
-        <p class="dates">Effective date: October 17, 2026 &nbsp;·&nbsp; Last updated: October 17, 2026</p>
-        <p class="lead">
-          These Terms of Service ("Terms") govern your access to and use of the
-          <strong>I Love Kanji</strong> mobile application (the "App"). By downloading,
-          accessing, purchasing through, or using the App, you agree to these Terms.
-          If you do not agree, do not use the App.
+        <p class="intro">
+          These terms are the agreement between you and the developer of <strong>I Love Kanji</strong> ("we", "us")
+          for using the I Love Kanji app for Android (the "app"). By installing, using or buying anything in the app,
+          you agree to them. If you don't agree, please don't use the app.
         </p>
-      </header>
 
-      <section class="summary" aria-labelledby="termsSummary">
-        <h2 id="termsSummary">Summary</h2>
+        <section class="glance" aria-labelledby="glance">
+          <h2 id="glance">The short version</h2>
+          <ul>
+            <li>I Love Kanji is a study tool for learning Japanese kanji.</li>
+            <li>N5 is free. N4 to N1 unlock with a Monthly or Yearly subscription, or a one-time Lifetime purchase, all through Google Play.</li>
+            <li>Subscriptions renew automatically until you cancel them in Google Play.</li>
+            <li>Your own stories and photos are yours. The app's content and design are ours.</li>
+            <li>Some audio, data, fonts and software come from others and are listed in section 12.</li>
+          </ul>
+        </section>
+
+        <h2 class="sec" id="accepting"><span class="n">1.</span><span>Who can use the app</span></h2>
         <p>
-          I Love Kanji is an educational kanji-learning tool. Some content is free, and additional
-          content can be unlocked with a one-time Google Play purchase. The App includes third-party
-          materials used under their own licenses, listed in Section 10.
+          You can use the app if the laws that apply to you allow it. If you're not old enough to agree to these terms
+          yourself, a parent or guardian needs to agree for you where the law requires it.
         </p>
-      </section>
 
-      <h2 class="section">1. Eligibility and acceptance</h2>
-      <p>
-        You may use the App only if you are legally permitted to do so under the laws that apply to you.
-        If you are not legally able to agree to these Terms on your own, a parent or legal guardian
-        must review and accept them on your behalf where required.
-      </p>
-
-      <h2 class="section">2. Educational purpose</h2>
-      <p>
-        I Love Kanji is a language-learning and study tool. It helps you learn and review Japanese
-        kanji through stories, audio, recall exercises, progress tracking, and spaced repetition.
-      </p>
-      <p>
-        Educational content may contain mistakes, omissions, variant readings, context-dependent
-        meanings, pronunciation differences, or other imperfections. The App is not an official
-        examination authority, a certified translation service, or a guaranteed source of
-        linguistic accuracy. JLPT level groupings in the App are unofficial study groupings; the
-        JLPT does not publish an official kanji list, and the App is not affiliated with or
-        endorsed by the organizers of the JLPT.
-      </p>
-
-      <h2 class="section">3. License to use the App</h2>
-      <p>
-        Subject to these Terms and any applicable app-store rules, you are granted a limited,
-        non-exclusive, non-transferable, non-sublicensable, revocable license to install and use
-        the App for your personal, lawful purposes.
-      </p>
-      <p>
-        This license does not transfer ownership of the App or any proprietary content to you.
-        All rights not expressly granted are reserved.
-      </p>
-
-      <h2 class="section">4. Your stories and photos</h2>
-      <p>
-        The App lets you write and save your own stories, and choose your own photo as the
-        lock screen background. You keep ownership of the stories you write and the photos you
-        choose, and you are responsible for them. This content stays on your device; we do not
-        receive it and do not claim any rights to it. This does not apply to the ready-made
-        stories provided in the App, which are our content under Section 9.
-      </p>
-      <p>
-        You must not use the App to create or use content in a way that violates applicable law
-        or the intellectual-property, privacy, or other rights of another person.
-      </p>
-
-      <h2 class="section">5. Purchases</h2>
-      <p>
-        The App offers a <strong>one-time purchase</strong> that unlocks additional kanji-learning
-        content. Unless the purchase screen expressly states otherwise, it is not a recurring
-        subscription.
-      </p>
-      <p>
-        Purchases are processed through Google Play Billing and are subject to Google Play's terms,
-        payment rules, regional requirements, and refund policies. Prices, taxes, currency
-        conversion, payment authorization, and transaction processing are controlled by Google Play.
-      </p>
-      <p>
-        A successful purchase grants the digital access described on the purchase screen. You are
-        responsible for using the Google account and device needed for Google Play to recognize or
-        restore that access.
-      </p>
-
-      <h2 class="section">6. Restoring purchases</h2>
-      <p>
-        The App can restore previously purchased access using purchase information provided by
-        Google Play. Restoration depends on the Google account used for the original purchase,
-        Google Play's records, network availability, and continued availability of the product.
-      </p>
-
-      <h2 class="section">7. Refunds</h2>
-      <p>
-        Refunds for Google Play purchases are governed by Google Play's refund policies and any
-        mandatory rights provided by law. Nothing in these Terms limits any consumer right that
-        cannot lawfully be excluded.
-      </p>
-
-      <h2 class="section">8. Acceptable use</h2>
-      <p>You agree not to:</p>
-      <ul>
-        <li>use the App for unlawful, fraudulent, abusive, or infringing purposes;</li>
-        <li>attempt to bypass purchase controls or obtain paid content without authorization;</li>
-        <li>interfere with, disrupt, overload, or compromise the App or the services it depends on;</li>
-        <li>introduce malicious code or use the App to distribute harmful software;</li>
-        <li>attempt to gain unauthorized access to systems, services, or data; or</li>
-        <li>remove or obscure copyright, trademark, license, or attribution notices.</li>
-      </ul>
-      <p>
-        Nothing in these Terms prohibits any activity that applicable law expressly permits despite
-        a contractual restriction.
-      </p>
-
-      <h2 class="section">9. Intellectual property</h2>
-      <p>
-        Except for the third-party materials listed in Section 10, the App and all of its original
-        content are the property of the developer and are protected by copyright and other
-        intellectual-property laws. This includes:
-      </p>
-      <ul>
-        <li>the ready-made kanji stories and their translations, written by or for the developer;</li>
-        <li>original explanations, lesson text, and other written content;</li>
-        <li>the selection, arrangement, and presentation of the learning content;</li>
-        <li>the source code, user interface, and visual design; and</li>
-        <li>the name "I Love Kanji," the logo, and other branding.</li>
-      </ul>
-      <p>
-        Unless we give you written permission, you may not copy, reproduce, extract, scrape,
-        republish, distribute, sell, license, translate, or create derivative works from this
-        content, whether in whole or in substantial part. This includes using it to build a
-        competing product or service, or to train or improve artificial-intelligence models.
-      </p>
-      <p>
-        These restrictions do not limit any use that applicable law expressly allows, or any right
-        granted to you directly by an open-source or third-party license for the materials listed
-        in Section 10. All rights not expressly granted are reserved.
-      </p>
-
-      <h2 class="section">10. Third-party content and licenses</h2>
-      <p>
-        The App contains third-party pronunciation audio, synthesized pronunciation audio,
-        dictionary and kanji data, fonts, and software. These materials are not original content
-        of I Love Kanji and remain subject to their own licenses and attribution requirements.
-        Buying or downloading the App does not replace, expand, or cancel any rights granted
-        directly by those licenses.
-      </p>
-
-      <div class="license">
-        <h3>Tofugu / WaniKani pronunciation audio — CC BY-SA 4.0</h3>
+        <h2 class="sec" id="what-the-app-is"><span class="n">2.</span><span>What the app is</span></h2>
         <p>
-          The App contains human-recorded Japanese vocabulary pronunciation audio from the
-          Tofugu / WaniKani Japanese Vocabulary Pronunciation Audio project, used under the
-          Creative Commons Attribution-ShareAlike 4.0 International license. One clip was
-          converted from OGG to MP3 format; this modified clip is shared under the same license.
+          I Love Kanji helps you learn and review Japanese kanji with stories, flashcards, quizzes, audio, progress
+          tracking and spaced repetition.
         </p>
         <p>
-          Attribution: <strong>Tofugu and WaniKani</strong><br />
-          Source:
-          <a href="https://github.com/tofugu/japanese-vocabulary-pronunciation-audio" target="_blank" rel="noopener noreferrer">Japanese Vocabulary Pronunciation Audio</a>
-          · License:
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+          We work hard on the content, but it may still contain mistakes, missing readings, or meanings that depend on
+          context. The app isn't an official exam body or a certified translation service. Its JLPT levels are our own
+          study groups: the JLPT doesn't publish an official kanji list, and the app isn't connected to or approved by
+          the JLPT organizers.
         </p>
-      </div>
 
-      <div class="license">
-        <h3>Kanji alive pronunciation audio — CC BY 4.0</h3>
+        <h2 class="sec" id="license"><span class="n">3.</span><span>Your license to use the app</span></h2>
         <p>
-          The App contains human-recorded pronunciation media from Kanji alive, used under the
-          Creative Commons Attribution 4.0 International license, subject to the exclusions
-          identified by Kanji alive. The App uses pronunciation media only, not Kanji alive's
-          excluded mnemonic hints.
+          We give you a personal, non-exclusive, non-transferable license to install and use the app for your own
+          lawful use, under these terms and the Google Play rules. We can take it back if you break these terms.
+          You don't own the app or its content, and we keep all rights we don't give you here.
         </p>
-        <p>
-          Attribution: <strong>Kanji alive — Harumi Hibino Lory &amp; Arno Bosse</strong><br />
-          Source:
-          <a href="https://github.com/kanjialive/kanji-data-media" target="_blank" rel="noopener noreferrer">Kanji alive Data &amp; Media</a>
-          ·
-          <a href="https://kanjialive.com/credits/" target="_blank" rel="noopener noreferrer">Kanji alive Credits</a>
-          · License:
-          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
-        </p>
-      </div>
 
-      <div class="license">
-        <h3>VOICEVOX / 四国めたん synthesized pronunciation audio</h3>
+        <h2 class="sec" id="your-content"><span class="n">4.</span><span>Your stories and photos</span></h2>
         <p>
-          Some pronunciation clips are synthesized speech generated with VOICEVOX CORE 0.17.0 using
-          VOICEVOX voice-model release 0.16.4, <strong>四国めたん (Shikoku Metan), normal style</strong>.
-          These clips are synthesized, not human recordings. Only the resulting MP3 files are included
-          in the App; the VOICEVOX software and voice model are not included.
-        </p>
-        <p><strong>Required credit: VOICEVOX:四国めたん</strong></p>
-        <p>
-          The VOICEVOX software terms and the 四国めたん / SSS voice-library terms permit commercial
-          and noncommercial use with the required credit, subject to their audio rules. Anyone who
-          reuses these clips must follow the same terms. The SSS terms include additional prohibited
-          uses, including certain political or religious uses, intentionally false or misleading
-          content, information-product uses, specified adult-entertainment businesses, violations of
-          public order or morality, and use by anti-social forces. Those terms are governed by
-          Japanese law, and the original Japanese terms control if there is any conflict with this summary.
+          You can write your own stories and choose your own lock screen photo. They belong to you, and you're
+          responsible for them. They stay on your phone (and in your own Android backup if it's on); we don't
+          receive them and don't claim any rights to them. The ready-made stories in the app are our content (section 11).
         </p>
         <p>
-          Where available, pitch-accent references for these clips were taken from
-          <a href="https://www.wiktionary.org/" target="_blank" rel="noopener noreferrer">Wiktionary</a>
-          (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>).
+          Don't use the app with content that breaks the law or someone else's rights.
         </p>
+
+        <h2 class="sec" id="free-and-paid"><span class="n">5.</span><span>Free and paid content</span></h2>
         <p>
-          Terms:
-          <a href="https://voicevox.hiroshiba.jp/term/" target="_blank" rel="noopener noreferrer">VOICEVOX Software Terms</a>
-          ·
-          <a href="https://zunko.jp/con_ongen_kiyaku.html" target="_blank" rel="noopener noreferrer">SSS / 四国めたん Voice Terms</a>
-          ·
-          <a href="https://github.com/VOICEVOX/voicevox_vvm/releases/tag/0.16.4" target="_blank" rel="noopener noreferrer">VOICEVOX Voice Model Release 0.16.4</a>
+          <strong>N5</strong> (80 kanji) is free with every feature, and the Library can be searched for all 2,200 kanji.
+          <strong>N4, N3, N2 and N1</strong> unlock together with one of these plans:
         </p>
-      </div>
-
-      <div class="license">
-        <h3>JMdict / KANJIDIC2 — EDRDG — CC BY-SA 4.0</h3>
+        <ul>
+          <li><strong>Monthly</strong>: a subscription that renews every month;</li>
+          <li><strong>Yearly</strong>: a subscription that renews every year, which may start with a free trial;</li>
+          <li><strong>Lifetime</strong>: a single payment, no renewals.</li>
+        </ul>
         <p>
-          Japanese readings and dictionary-derived information in the App use the JMdict and
-          KANJIDIC2 files (2026-09-07 snapshot). These files are the property of the Electronic
-          Dictionary Research and Development Group (EDRDG) and are used in conformance with the
-          Group's licence, under the Creative Commons Attribution-ShareAlike 4.0 license. The data
-          was obtained in part through the jmdict-simplified project.
+          All purchases go through <strong>Google Play Billing</strong> and follow Google Play's terms. Google Play sets
+          the price in your currency, taxes, sales and payment. The purchase page shows exactly what Google Play will
+          charge before you pay.
         </p>
+
+        <h2 class="sec" id="subscriptions"><span class="n">6.</span><span>Subscriptions and free trials</span></h2>
+        <ul>
+          <li><strong>Auto-renewal.</strong> Monthly and Yearly renew automatically at the end of each period, and Google Play charges you, until you cancel.</li>
+          <li><strong>Free trial.</strong> If your Yearly plan includes a free trial, you won't be charged during the trial. If you don't cancel before it ends, the paid subscription starts and Google Play charges you. Free trials are only for people Google Play says can use them.</li>
+          <li><strong>Cancelling.</strong> Cancel any time in Google Play → Payments &amp; subscriptions, or in the app under Settings → Manage subscription. Deleting the app doesn't cancel a subscription.</li>
+          <li><strong>After it ends.</strong> You keep access until the end of the period you paid for. Then N4–N1 lock again, but your learned kanji, stories and reviews stay.</li>
+          <li><strong>Offline.</strong> The app checks your subscription with Google Play when it's online. Without internet, paid levels stay open for up to 7 days after the last successful check.</li>
+          <li><strong>Price changes.</strong> If a subscription price changes, Google Play will tell you beforehand as its rules require.</li>
+        </ul>
+
+        <h2 class="sec" id="lifetime"><span class="n">7.</span><span>Lifetime purchase</span></h2>
         <p>
-          Attribution:
-          <a href="https://www.edrdg.org/" target="_blank" rel="noopener noreferrer">EDRDG</a>
-          ·
-          <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener noreferrer">KANJIDIC Project</a>
-          · Licence:
-          <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener noreferrer">EDRDG Licence Statement</a>
-          ·
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
-          · Source:
-          <a href="https://github.com/scriptin/jmdict-simplified" target="_blank" rel="noopener noreferrer">jmdict-simplified</a>
+          Lifetime is a one-time payment that unlocks N4–N1 for as long as we offer and support the app, on any phone
+          signed in to the same Google account. It isn't a subscription. If you have a subscription and buy Lifetime,
+          remember to cancel the subscription in Google Play so it doesn't renew.
         </p>
-      </div>
 
-      <div class="license">
-        <h3>Kanji catalog and vocabulary data — MIT</h3>
+        <h2 class="sec" id="restoring"><span class="n">8.</span><span>Restoring purchases</span></h2>
         <p>
-          Kanji meanings, readings, and level information are derived from the
-          <a href="https://github.com/davidluzgouveia/kanji-data" target="_blank" rel="noopener noreferrer">davidluzgouveia/kanji-data</a>
-          project (MIT License), which identifies KANJIDIC, Jonathan Waller's JLPT resources, and
-          WaniKani as its upstream sources. Vocabulary examples are derived from
-          <a href="https://github.com/AnchorI/jlpt-kanji-dictionary" target="_blank" rel="noopener noreferrer">AnchorI/jlpt-kanji-dictionary</a>
-          (MIT License), with the upstream EDRDG / JMdict attribution above retained.
+          If you reinstall the app or get a new phone, your purchase comes back automatically the first time the app
+          is online with the same Google account. You can also tap <strong>Restore purchase</strong> on the purchase page.
+          This depends on Google Play's records and an internet connection. Resetting your progress never removes a purchase.
         </p>
+
+        <h2 class="sec" id="refunds"><span class="n">9.</span><span>Refunds</span></h2>
         <p>
-          License:
-          <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer">MIT License</a>
+          Refunds are handled by Google Play under its refund policy and your local consumer laws. If Google refunds
+          a purchase, the paid levels lock again. Nothing in these terms takes away consumer rights you have by law.
         </p>
-      </div>
 
-      <div class="license">
-        <h3>Software</h3>
+        <h2 class="sec" id="acceptable-use"><span class="n">10.</span><span>Fair use</span></h2>
+        <p>Please don't:</p>
+        <ul>
+          <li>use the app for anything illegal, fraudulent, abusive or infringing;</li>
+          <li>try to get paid content without paying, or get around purchase checks;</li>
+          <li>break, overload or interfere with the app or the services it uses;</li>
+          <li>add malware or use the app to spread harmful software;</li>
+          <li>try to access systems or data you're not allowed to; or</li>
+          <li>remove copyright, license or credit notices.</li>
+        </ul>
+        <p>This doesn't stop you from doing anything the law specifically allows.</p>
+
+        <h2 class="sec" id="our-content"><span class="n">11.</span><span>Our content</span></h2>
         <p>
-          <strong>Godot Engine</strong> — MIT License.
-          <a href="https://godotengine.org/license/" target="_blank" rel="noopener noreferrer">Godot license</a>
+          Apart from the third-party materials in section 12, the app and its original content belong to us and are
+          protected by copyright and other laws. This includes:
         </p>
+        <ul>
+          <li>the ready-made kanji stories and their translations;</li>
+          <li>explanations, lesson text and other writing;</li>
+          <li>how the learning content is selected, ordered and presented;</li>
+          <li>the code, interface and design; and</li>
+          <li>the name "I Love Kanji", the logo and other branding.</li>
+        </ul>
         <p>
-          <strong>Godot Google Play Billing plugin</strong> — MIT License, © Godot Engine contributors.
-          <a href="https://github.com/godot-sdk-integrations/godot-google-play-billing" target="_blank" rel="noopener noreferrer">Source</a>
+          Without our written permission, you can't copy, scrape, republish, share, sell, translate or build on this
+          content, in whole or in large part. That includes using it to build a competing product or to train
+          AI models. This doesn't limit uses the law allows, or rights given to you directly by the licenses in section 12.
         </p>
+
+        <h2 class="sec" id="third-party"><span class="n">12.</span><span>Third-party content and licenses</span></h2>
         <p>
-          <strong>FSRS scheduling</strong> — memory equations ported from py-fsrs, MIT License,
-          © Open Spaced Repetition.
-          <a href="https://github.com/open-spaced-repetition/py-fsrs" target="_blank" rel="noopener noreferrer">Source</a>
+          The app includes pronunciation audio, synthesized audio, a sound effect, dictionary and kanji data, fonts and
+          software made by others. They aren't our original content and stay under their own licenses and credit rules.
+          Buying or downloading the app doesn't change the rights those licenses give you.
         </p>
-        <p>
-          <strong>Google Play Billing Library, Google Play In-App Review library, and Firebase
-          Analytics SDK</strong> — provided by Google under Google's applicable terms.
-        </p>
-      </div>
-
-      <div class="license">
-        <h3>Fonts</h3>
-        <p>
-          <strong>Source Han Sans</strong> — © 2014–2021 Adobe, with Reserved Font Name "Source."
-          Included in the App under the name "MyKanjiJP" and licensed under the SIL Open Font
-          License, Version 1.1. Source is a trademark of Adobe in the United States and/or other countries.
-          <a href="https://github.com/adobe-fonts/source-han-sans" target="_blank" rel="noopener noreferrer">Source</a>
-          ·
-          <a href="https://openfontlicense.org/" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a>
-        </p>
-        <p>
-          <strong>DejaVu Sans</strong> — Bitstream Vera Fonts copyright © 2003 Bitstream, Inc.;
-          DejaVu changes are in the public domain.
-          <a href="https://dejavu-fonts.github.io/License.html" target="_blank" rel="noopener noreferrer">DejaVu license</a>
-        </p>
-      </div>
-
-      <div class="notice">
-        <p>
-          <strong>Audio reuse notice.</strong> Buying or installing the App does not give you a
-          separate license to extract or redistribute the bundled audio. Any reuse of third-party
-          audio must follow the license or voice-library terms of that particular source. Nothing
-          in these Terms limits rights that an open-content license grants directly to you.
-        </p>
-      </div>
-
-      <p>
-        Third-party names, voices, products, projects, and trademarks are mentioned only for
-        attribution and identification. No third party is represented as sponsoring, endorsing,
-        or being affiliated with I Love Kanji.
-      </p>
-
-      <h2 class="section">11. Privacy</h2>
-      <p>
-        Your use of the App is also subject to the
-        <a href="../privacy-policy/">I Love Kanji Privacy Policy</a>, which explains how information
-        is handled in connection with the App.
-      </p>
-
-      <h2 class="section">12. Updates, compatibility, and availability</h2>
-      <p>
-        We may update, modify, improve, replace, or discontinue App features from time to time,
-        for example because of operating-system updates, security issues, app-store requirements,
-        licensing constraints, service changes, or product decisions.
-      </p>
-      <p>
-        We do not guarantee that the App will remain compatible with every device, operating-system
-        version, or third-party service indefinitely.
-      </p>
-
-      <h2 class="section">13. Third-party services</h2>
-      <p>
-        Some App and website functions depend on services operated by third parties, including
-        Google Play, Firebase, and FormSubmit for messages sent through the contact form on this
-        website. We do not control those services and are not responsible for outages, policy
-        changes, account restrictions, payment failures, delivery failures, or other issues caused
-        by systems outside our reasonable control.
-      </p>
-
-      <h2 class="section">14. Disclaimer of warranties</h2>
-      <p>
-        To the maximum extent permitted by applicable law, the App is provided
-        <strong>"as is" and "as available."</strong> We disclaim all warranties not expressly
-        required by law, including implied warranties of merchantability, fitness for a particular
-        purpose, non-infringement, uninterrupted availability, and error-free operation.
-      </p>
-      <p>
-        Nothing in this section excludes or limits any warranty, guarantee, or consumer protection
-        that cannot lawfully be excluded.
-      </p>
-
-      <h2 class="section">15. Limitation of liability</h2>
-      <p>
-        To the maximum extent permitted by applicable law, the developer will not be liable for any
-        indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of
-        data, profits, goodwill, opportunity, or business, arising from or related to your use of,
-        or inability to use, the App.
-      </p>
-      <p>
-        Where liability cannot be excluded but may lawfully be limited, total liability arising out
-        of or relating to the App will not exceed the amount you actually paid for the App or the
-        in-app purchase giving rise to the claim during the twelve months before the event giving
-        rise to liability. This limitation does not apply where prohibited by law.
-      </p>
-
-      <h2 class="section">16. Suspension or termination</h2>
-      <p>
-        We may restrict access to App functionality where reasonably necessary to protect the App,
-        its users, third-party services, intellectual-property rights, or legal compliance. Because
-        the App does not use accounts, most features run locally on your device.
-      </p>
-
-      <h2 class="section">17. Changes to these Terms</h2>
-      <p>
-        We may update these Terms when the App, its business model, platform requirements, or
-        applicable law changes. The current version will be posted on this page with a new
-        effective date. Continued use of the App after updated Terms take effect means you accept
-        them, where permitted by applicable law.
-      </p>
-
-      <h2 class="section">18. Governing law and disputes</h2>
-      <p>
-        These Terms, and any dispute arising out of or relating to them or the App, are governed by
-        the laws of the Republic of Armenia, without regard to its conflict-of-laws rules. The United
-        Nations Convention on Contracts for the International Sale of Goods does not apply.
-      </p>
-      <p>
-        Any such dispute will be resolved by the competent courts of the Republic of Armenia. Before
-        starting any legal proceedings, please contact us at the email address in Section 22 so we
-        can try to resolve the issue informally.
-      </p>
-      <p>
-        If you are a consumer, this section does not take away any protection given to you by the
-        mandatory laws of the country where you live, including any right to bring a claim in the
-        courts of that country.
-      </p>
-
-      <h2 class="section">19. Severability</h2>
-      <p>
-        If any provision of these Terms is found unenforceable or invalid, that provision will be
-        limited to the minimum extent necessary, and the remaining provisions will remain in effect.
-      </p>
-
-      <h2 class="section">20. No waiver</h2>
-      <p>
-        A failure to enforce any provision of these Terms is not a waiver of the right to enforce
-        that provision or any other provision later.
-      </p>
-
-      <h2 class="section">21. Entire agreement</h2>
-      <p>
-        These Terms, together with the Privacy Policy and any terms presented at the time of a
-        specific purchase, form the entire agreement governing your use of the App, subject to any
-        mandatory rights under applicable law and any applicable app-store terms.
-      </p>
-
-      <h2 class="section">22. Contact</h2>
-      <p>For questions about these Terms or the App, contact:</p>
-      <div class="contact-block">
-        <span class="label">Support</span>
-        <a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a>
-      </div>
-    </article>
-
-    <footer>
-      <p><strong>Audio credit: VOICEVOX:四国めたん</strong></p>
-      <p>© 2026 I Love Kanji. All rights reserved, except third-party materials used under their own licenses.</p>
-    </footer>
-  </main>
-
-  <!-- ===================== CONTACT FORM ===================== -->
-  <div class="modal-backdrop" id="chatModal" aria-hidden="true">
-    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-      <div class="modal-top">
-        <div>
-          <h2 id="contactTitle">Contact I Love Kanji</h2>
-          <p>Send a support, legal, or privacy message.</p>
+        <div class="license">
+          <h3>Tofugu / WaniKani pronunciation audio — CC BY-SA 4.0</h3>
+          <p>
+            The App contains human-recorded Japanese vocabulary pronunciation audio from the
+            Tofugu / WaniKani Japanese Vocabulary Pronunciation Audio project, used under the
+            Creative Commons Attribution-ShareAlike 4.0 International license. One clip was
+            converted from OGG to MP3 format; this modified clip is shared under the same license.
+          </p>
+          <p>
+            Attribution: <strong>Tofugu and WaniKani</strong><br />
+            Source:
+            <a href="https://github.com/tofugu/japanese-vocabulary-pronunciation-audio" target="_blank" rel="noopener noreferrer">Japanese Vocabulary Pronunciation Audio</a>
+            · License:
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+          </p>
         </div>
-        <button class="modal-close" id="closeChat" type="button" aria-label="Close contact form">×</button>
-      </div>
 
-      <form class="modal-form" id="contactForm" novalidate>
-        <label for="senderEmail">Your email address</label>
-        <input
-          id="senderEmail"
-          name="email"
-          type="email"
-          inputmode="email"
-          autocomplete="email"
-          placeholder="you@example.com"
-          required
-        />
-
-        <label for="senderMessage">Message</label>
-        <textarea
-          id="senderMessage"
-          name="message"
-          placeholder="How can we help?"
-          required
-        ></textarea>
-
-        <input
-          type="text"
-          id="websiteField"
-          name="_honey"
-          tabindex="-1"
-          autocomplete="off"
-          aria-hidden="true"
-          style="position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none;"
-        />
-
-        <div class="form-status" id="formError" role="alert">Enter a valid email address and a message.</div>
-
-        <button class="submit-btn" id="submitContact" type="submit">Send Message</button>
-        <p class="form-note">
-          Your email address and message are sent through our form-delivery provider, FormSubmit,
-          and forwarded to <strong>support.artyomblack@gmail.com</strong>. See Section 18 of the
-          Privacy Policy. You stay on this page.
-        </p>
-        <div class="form-status" id="formSuccess" role="status">
-          Message sent. We received your request.
+        <div class="license">
+          <h3>Kanji alive pronunciation audio — CC BY 4.0</h3>
+          <p>
+            The App contains human-recorded pronunciation media from Kanji alive, used under the
+            Creative Commons Attribution 4.0 International license, subject to the exclusions
+            identified by Kanji alive. The App uses pronunciation media only, not Kanji alive's
+            excluded mnemonic hints.
+          </p>
+          <p>
+            Attribution: <strong>Kanji alive — Harumi Hibino Lory &amp; Arno Bosse</strong><br />
+            Source:
+            <a href="https://github.com/kanjialive/kanji-data-media" target="_blank" rel="noopener noreferrer">Kanji alive Data &amp; Media</a>
+            ·
+            <a href="https://kanjialive.com/credits/" target="_blank" rel="noopener noreferrer">Kanji alive Credits</a>
+            · License:
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
+          </p>
         </div>
-      </form>
-    </section>
+
+        <div class="license">
+          <h3>VOICEVOX / 四国めたん synthesized pronunciation audio</h3>
+          <p>
+            Some pronunciation clips are synthesized speech generated with VOICEVOX CORE 0.17.0 using
+            VOICEVOX voice-model release 0.16.4, <strong>四国めたん (Shikoku Metan), normal style</strong>.
+            These clips are synthesized, not human recordings. Only the resulting MP3 files are included
+            in the App; the VOICEVOX software and voice model are not included.
+          </p>
+          <p><strong>Required credit: VOICEVOX:四国めたん</strong></p>
+          <p>
+            The VOICEVOX software terms and the 四国めたん / SSS voice-library terms permit commercial
+            and noncommercial use with the required credit, subject to their audio rules. Anyone who
+            reuses these clips must follow the same terms. The SSS terms include additional prohibited
+            uses, including certain political or religious uses, intentionally false or misleading
+            content, information-product uses, specified adult-entertainment businesses, violations of
+            public order or morality, and use by anti-social forces. Those terms are governed by
+            Japanese law, and the original Japanese terms control if there is any conflict with this summary.
+          </p>
+          <p>
+            Where available, pitch-accent references for these clips were taken from
+            <a href="https://www.wiktionary.org/" target="_blank" rel="noopener noreferrer">Wiktionary</a>
+            (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>).
+          </p>
+          <p>
+            Terms:
+            <a href="https://voicevox.hiroshiba.jp/term/" target="_blank" rel="noopener noreferrer">VOICEVOX Software Terms</a>
+            ·
+            <a href="https://zunko.jp/con_ongen_kiyaku.html" target="_blank" rel="noopener noreferrer">SSS / 四国めたん Voice Terms</a>
+            ·
+            <a href="https://github.com/VOICEVOX/voicevox_vvm/releases/tag/0.16.4" target="_blank" rel="noopener noreferrer">VOICEVOX Voice Model Release 0.16.4</a>
+          </p>
+        </div>
+
+        <div class="license">
+          <h3>Mixkit sound effect</h3>
+          <p>
+            The streak chime is based on "Fantasy game success notification" from Mixkit, used under the
+            Mixkit Sound Effects Free License (volume lowered and converted to OGG).
+          </p>
+          <p>
+            Source: <a href="https://mixkit.co/" target="_blank" rel="noopener noreferrer">mixkit.co</a>
+            · License: <a href="https://mixkit.co/license/" target="_blank" rel="noopener noreferrer">Mixkit License</a>
+          </p>
+        </div>
+
+        <div class="license">
+          <h3>JMdict / KANJIDIC2 — EDRDG — CC BY-SA 4.0</h3>
+          <p>
+            Japanese readings and dictionary-derived information in the App use the JMdict and
+            KANJIDIC2 files (2026-09-07 snapshot). These files are the property of the Electronic
+            Dictionary Research and Development Group (EDRDG) and are used in conformance with the
+            Group's licence, under the Creative Commons Attribution-ShareAlike 4.0 license. The data
+            was obtained in part through the jmdict-simplified project.
+          </p>
+          <p>
+            Attribution:
+            <a href="https://www.edrdg.org/" target="_blank" rel="noopener noreferrer">EDRDG</a>
+            ·
+            <a href="https://www.edrdg.org/wiki/KANJIDIC_Project.html" target="_blank" rel="noopener noreferrer">KANJIDIC Project</a>
+            · Licence:
+            <a href="https://www.edrdg.org/edrdg/licence.html" target="_blank" rel="noopener noreferrer">EDRDG Licence Statement</a>
+            ·
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+            · Source:
+            <a href="https://github.com/scriptin/jmdict-simplified" target="_blank" rel="noopener noreferrer">jmdict-simplified</a>
+          </p>
+        </div>
+
+        <div class="license">
+          <h3>Kanji catalog and vocabulary data — MIT</h3>
+          <p>
+            Kanji meanings, readings, and level information are derived from the
+            <a href="https://github.com/davidluzgouveia/kanji-data" target="_blank" rel="noopener noreferrer">davidluzgouveia/kanji-data</a>
+            project (MIT License), which identifies KANJIDIC, Jonathan Waller's JLPT resources, and
+            WaniKani as its upstream sources. Vocabulary examples are derived from
+            <a href="https://github.com/AnchorI/jlpt-kanji-dictionary" target="_blank" rel="noopener noreferrer">AnchorI/jlpt-kanji-dictionary</a>
+            (MIT License), with the upstream EDRDG / JMdict attribution above retained.
+          </p>
+          <p>
+            License:
+            <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer">MIT License</a>
+          </p>
+        </div>
+
+        <div class="license">
+          <h3>Software</h3>
+          <p>
+            <strong>Godot Engine 4.7.2</strong> — MIT License.
+            <a href="https://godotengine.org/license/" target="_blank" rel="noopener noreferrer">Godot license</a>
+          </p>
+          <p>
+            <strong>GodotGooglePlayBilling 3.3.0</strong> — MIT License, © Godot Engine contributors.
+            <a href="https://github.com/godot-sdk-integrations/godot-google-play-billing" target="_blank" rel="noopener noreferrer">Source</a>
+          </p>
+          <p>
+            <strong>FSRS-6 scheduling</strong> — memory equations adapted from py-fsrs, MIT License,
+            © Open Spaced Repetition.
+            <a href="https://github.com/open-spaced-repetition/py-fsrs" target="_blank" rel="noopener noreferrer">Source</a>
+          </p>
+          <p>
+            <strong>Google Play Billing Library, Play In-App Review, Play In-App Update and Firebase Analytics SDK</strong> — provided by Google under Google's applicable terms.
+          </p>
+        </div>
+
+        <div class="license">
+          <h3>Fonts</h3>
+          <p>
+            <strong>Source Han Sans</strong> — © 2014–2021 Adobe, with Reserved Font Name "Source."
+            Included in the App under the name "MyKanjiJP" and licensed under the SIL Open Font
+            License, Version 1.1. Source is a trademark of Adobe in the United States and/or other countries.
+            <a href="https://github.com/adobe-fonts/source-han-sans" target="_blank" rel="noopener noreferrer">Source</a>
+            ·
+            <a href="https://openfontlicense.org/" target="_blank" rel="noopener noreferrer">SIL Open Font License 1.1</a>
+          </p>
+          <p>
+            <strong>DejaVu Sans</strong> — Bitstream Vera Fonts copyright © 2003 Bitstream, Inc.;
+            DejaVu changes are in the public domain.
+            <a href="https://dejavu-fonts.github.io/License.html" target="_blank" rel="noopener noreferrer">DejaVu license</a>
+          </p>
+        </div>
+
+        <div class="notice">
+          <p>
+            <strong>Audio reuse notice.</strong> Buying or installing the App does not give you a
+            separate license to extract or redistribute the bundled audio. Any reuse of third-party
+            audio must follow the license or voice-library terms of that particular source. Nothing
+            in these Terms limits rights that an open-content license grants directly to you.
+          </p>
+        </div>
+
+        <p>
+          Third-party names, voices, products, projects, and trademarks are mentioned only for
+          attribution and identification. No third party is represented as sponsoring, endorsing,
+          or being affiliated with I Love Kanji.
+        </p>
+
+        <h2 class="sec" id="privacy"><span class="n">13.</span><span>Privacy</span></h2>
+        <p>
+          The <a href="../privacy-policy/">I Love Kanji Privacy Policy</a> explains what information the app handles and how.
+        </p>
+
+        <h2 class="sec" id="updates"><span class="n">14.</span><span>Updates and availability</span></h2>
+        <p>
+          We may update, change, or remove features, for example for Android or Google Play changes, security, licensing
+          or product decisions. When a new version is on Google Play, the app may ask you to update. We can't promise the
+          app will work on every phone, Android version or third-party service forever.
+        </p>
+
+        <h2 class="sec" id="services"><span class="n">15.</span><span>Third-party services</span></h2>
+        <p>
+          Parts of the app and this website depend on other companies' services, including Google Play, Firebase,
+          Android backup, and FormSubmit for chat messages on this website. We don't control them and aren't responsible
+          for their outages, policy changes, payment problems or other issues outside our control.
+        </p>
+
+        <h2 class="sec" id="warranty"><span class="n">16.</span><span>No warranty</span></h2>
+        <p>
+          As far as the law allows, the app is provided <strong>"as is" and "as available"</strong>. We don't promise it
+          will be error-free, always available, or right for a particular purpose. This doesn't remove any guarantee
+          or consumer protection that the law says can't be removed.
+        </p>
+
+        <h2 class="sec" id="liability"><span class="n">17.</span><span>Limits on liability</span></h2>
+        <p>
+          As far as the law allows, we're not liable for indirect, incidental, special or consequential damages, or for
+          lost data, profits or opportunities, from using or not being able to use the app.
+        </p>
+        <p>
+          Where liability can be limited but not excluded, our total liability is limited to what you paid for the app
+          or the purchase in question in the 12 months before the problem happened. This doesn't apply where the law forbids it.
+        </p>
+
+        <h2 class="sec" id="suspension"><span class="n">18.</span><span>Restricting access</span></h2>
+        <p>
+          We may limit access to parts of the app when that's reasonably needed to protect the app, its users, other
+          services, our rights, or to follow the law. Since there are no accounts, most of the app runs on your phone.
+        </p>
+
+        <h2 class="sec" id="changes"><span class="n">19.</span><span>Changes to these terms</span></h2>
+        <p>
+          We may update these terms when the app, its plans, Google Play's rules or the law change. The new version will
+          be posted here with a new "Last updated" date. If you keep using the app after that, you accept the new terms
+          where the law allows. Changes don't affect a payment you've already made.
+        </p>
+
+        <h2 class="sec" id="law"><span class="n">20.</span><span>Governing law and disputes</span></h2>
+        <p>
+          These terms are governed by the laws of the Republic of Armenia, without its conflict-of-law rules. The UN
+          Convention on Contracts for the International Sale of Goods doesn't apply. Disputes go to the competent courts
+          of the Republic of Armenia. Before going to court, please message us (section 24) so we can try to sort it out.
+        </p>
+        <p>
+          If you're a consumer, you keep any protection the laws of your country give you, including the right to bring
+          a claim in your local courts.
+        </p>
+
+        <h2 class="sec" id="severability"><span class="n">21.</span><span>If part of these terms doesn't apply</span></h2>
+        <p>
+          If any part of these terms can't be enforced, it's limited as little as needed, and the rest still applies.
+        </p>
+
+        <h2 class="sec" id="no-waiver"><span class="n">22.</span><span>No waiver</span></h2>
+        <p>
+          If we don't enforce part of these terms right away, we can still enforce it later.
+        </p>
+
+        <h2 class="sec" id="entire-agreement"><span class="n">23.</span><span>Entire agreement</span></h2>
+        <p>
+          These terms, the Privacy Policy and anything shown to you when you buy a plan are the whole agreement between
+          us about the app, together with Google Play's terms and any rights you have by law.
+        </p>
+
+        <h2 class="sec" id="contact"><span class="n">24.</span><span>Contact us</span></h2>
+        <p>
+          Questions about these terms, a purchase or the app? Tap the red chat button in the bottom corner, or email
+          <a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a>.
+        </p>
+        <div class="contact">
+          <p><strong>Support</strong><br /><a href="mailto:support.artyomblack@gmail.com">support.artyomblack@gmail.com</a></p>
+          <button class="btn" type="button" data-open-chat>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>
+            Message us
+          </button>
+        </div>
+
+        <footer class="site-foot">
+          <p><strong>Audio credit: VOICEVOX:四国めたん</strong></p>
+          <p>© 2026 I Love Kanji. All rights reserved, except third-party materials used under their own licenses.</p>
+        </footer>
+      </article>
+    </main>
   </div>
 
-  <script>
-    (() => {
-      const privacyPanel = document.getElementById("privacyPanel");
-      const termsPanel = document.getElementById("termsPanel");
-      const privacyNav = document.getElementById("privacyNav");
-      const termsNav = document.getElementById("termsNav");
+  <button class="chat-fab" id="chatFab" type="button" aria-controls="chat" aria-expanded="false" aria-label="Message us"><svg class="bubble" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2.8"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
 
-      function normalizeHash() {
-        return "#terms-of-service";
-      }
+  <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chatTitle" aria-hidden="true">
+    <div class="chat-head">
+      <img src="../assets/icon.webp" alt="" width="38" height="38" />
+      <div><b id="chatTitle">I Love Kanji support</b><span>We reply by email</span></div>
+      <button class="chat-close" id="chatClose" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="chat-log" id="chatLog" aria-live="polite">
+      <div class="msg them">Hi! Ask us anything about the app, a purchase or your privacy. We'll answer by email.</div>
+    </div>
+    <form class="chat-form" id="chatForm" novalidate>
+      <label class="sr" for="chatEmail">Your email</label>
+      <input id="chatEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email, so we can reply" required />
+      <div class="row">
+        <label class="sr" for="chatText">Message</label>
+        <textarea id="chatText" name="message" rows="1" placeholder="Write a message…" required></textarea>
+        <button class="send" id="chatSend" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+      </div>
+      <input class="hp" id="chatHp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <p class="chat-fine">Sent by FormSubmit to support.artyomblack@gmail.com. See the <a href="../privacy-policy/#contact">Privacy Policy</a>.</p>
+    </form>
+  </section>
 
-      function renderRoute() {
-        const route = normalizeHash();
-        const showTerms = route === "#terms-of-service";
-
-        privacyPanel.classList.toggle("active", !showTerms);
-        termsPanel.classList.toggle("active", showTerms);
-        privacyNav.classList.toggle("active", !showTerms);
-        termsNav.classList.toggle("active", showTerms);
-
-        if (showTerms) {
-          termsNav.setAttribute("aria-current", "page");
-          privacyNav.removeAttribute("aria-current");
-        } else {
-          privacyNav.setAttribute("aria-current", "page");
-          termsNav.removeAttribute("aria-current");
-        }
-
-        document.title = showTerms
-          ? "I Love Kanji — Terms of Service"
-          : "I Love Kanji — Privacy Policy";
-
-        window.scrollTo({ top: 0, behavior: "auto" });
-      }
-
-      renderRoute();
-
-      const modal = document.getElementById("chatModal");
-      const openButton = document.getElementById("openChat");
-      const closeButton = document.getElementById("closeChat");
-      const form = document.getElementById("contactForm");
-      const emailInput = document.getElementById("senderEmail");
-      const messageInput = document.getElementById("senderMessage");
-      const error = document.getElementById("formError");
-      const success = document.getElementById("formSuccess");
-      const submitButton = document.getElementById("submitContact");
-      const honeypot = document.getElementById("websiteField");
-
-      function openModal() {
-        modal.classList.add("open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-        setTimeout(() => emailInput.focus(), 40);
-      }
-
-      function closeModal() {
-        modal.classList.remove("open");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-        error.style.display = "none";
-        openButton.focus();
-      }
-
-      openButton.addEventListener("click", openModal);
-      closeButton.addEventListener("click", closeModal);
-
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) closeModal();
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && modal.classList.contains("open")) closeModal();
-      });
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const email = emailInput.value.trim();
-        const message = messageInput.value.trim();
-
-        error.style.display = "none";
-        success.style.display = "none";
-
-        if (!email || !message || !emailInput.checkValidity()) {
-          error.textContent = "Enter a valid email address and a message.";
-          error.style.display = "block";
-          return;
-        }
-
-        // Silently ignore obvious bot submissions.
-        if (honeypot && honeypot.value.trim() !== "") {
-          success.style.display = "block";
-          form.reset();
-          return;
-        }
-
-        const currentDocument =
-          normalizeHash() === "#terms-of-service" ? "Terms of Service" : "Privacy Policy";
-
-        const originalText = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending…";
-
-        try {
-          const response = await fetch(
-            "https://formsubmit.co/ajax/support.artyomblack@gmail.com",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-              },
-              body: JSON.stringify({
-                email: email,
-                _replyto: email,
-                _subject: "I Love Kanji Support",
-                page: currentDocument,
-                message: message,
-                _template: "table",
-                _captcha: "false"
-              })
-            }
-          );
-
-          const data = await response.json().catch(() => ({}));
-
-          if (!response.ok || data.success === "false" || data.success === false) {
-            throw new Error(data.message || "Unable to send message.");
-          }
-
-          form.reset();
-          success.textContent = "Message sent. We received your request.";
-          success.style.display = "block";
-        } catch (sendError) {
-          console.error(sendError);
-          error.textContent =
-            "Your message could not be sent. Please try again or email support.artyomblack@gmail.com.";
-          error.style.display = "block";
-        } finally {
-          submitButton.disabled = false;
-          submitButton.textContent = originalText;
-        }
-      });
-    })();
-  </script>
+  <script src="../assets/legal.js"></script>
 </body>
 </html>
