@@ -1,9 +1,9 @@
 /* I Love Kanji — Privacy Policy and Terms of Service.
    Colors are the app's own (scripts/ui.gd): paper, ink, muted, and the red used for buttons.
-   Dark mode uses the app's gray-mode values. */
+   The pages are always light. */
 :root {
-  --paper: #fcfbf9;
-  --raised: #ffffff;
+  --paper: #ffffff;
+  --raised: #f7f6f4;
   --ink: #1d1d20;
   --body: #3a3a3f;
   --muted: #7e7e7b;
@@ -14,22 +14,7 @@
   --on-red: #ffffff;
   --side-w: 288px;
   --top-h: 60px;
-  color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #1f1f22;
-    --raised: #27272b;
-    --ink: #f4f4f5;
-    --body: #d6d6db;
-    --muted: #b4b4bc;
-    --line: #37373d;
-    --red: #ff797e;
-    --red-ink: #ff9a9e;
-    --red-soft: #3a2527;
-    --on-red: #1f1f22;
-    color-scheme: dark;
-  }
+  color-scheme: only light;
 }
 
 * { box-sizing: border-box; }
@@ -151,17 +136,9 @@ a:hover { text-decoration-thickness: 2px; }
 }
 @media (max-width: 900px) { .doc { padding: 32px 18px 120px; } }
 
-.doc-head { display: flex; align-items: flex-start; gap: 22px; margin-bottom: 28px; }
-.seal {
-  flex: none;
-  width: 84px; height: 84px; border-radius: 18px;
-  display: grid; place-items: center;
-  background: var(--red); color: var(--on-red);
-  font: 700 54px/1 "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  transform: rotate(-4deg);
-  box-shadow: inset 0 0 0 4px var(--red), inset 0 0 0 6px color-mix(in srgb, var(--on-red) 70%, transparent);
-}
-@media (max-width: 600px) { .seal { width: 64px; height: 64px; font-size: 40px; border-radius: 14px; } .doc-head { gap: 16px; } }
+.doc-head { display: flex; align-items: center; gap: 22px; margin-bottom: 28px; }
+.app-icon { flex: none; width: 84px; height: 84px; border-radius: 22%; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+@media (max-width: 600px) { .app-icon { width: 64px; height: 64px; } .doc-head { gap: 16px; } }
 .doc h1 {
   margin: 4px 0 6px; color: var(--ink);
   font: 800 clamp(30px, 6vw, 44px)/1.05 "Montserrat", system-ui, sans-serif; letter-spacing: -.02em;
