@@ -78,7 +78,7 @@
             <li>No account and no sign-up.</li>
             <li>Free learners see a few ads from Google AdMob: full-screen ads once they've learned 15 kanji in any study method, and rewarded ads they can choose to watch from the start. Premium has no ads.</li>
             <li>Your progress, settings and lock screen photo are saved on your phone.</li>
-            <li>What you draw in the Drawing method is checked on your phone while you write and isn't saved or sent anywhere.</li>
+            <li>What you draw in the Drawing method and in Kana practice is checked on your phone while you write and isn't saved or sent anywhere.</li>
             <li>If Android backup is on, your phone copies that data into your own Google account backup so you can get it back on a new phone.</li>
             <li>We use Google Firebase Analytics to see how the app is used. It never receives your drawings or your photos.</li>
             <li>Payments for Monthly, Yearly and Lifetime are handled by Google Play. We never see your card details.</li>
@@ -112,9 +112,15 @@
               </tr>
               <tr>
                 <td>Drawing practice</td>
-                <td>The strokes you write with your finger in the Drawing method</td>
-                <td>To check each stroke against the kanji's stroke order</td>
+                <td>The strokes you write with your finger in the Drawing method and in Kana practice</td>
+                <td>To check each stroke against the stroke order</td>
                 <td>Only in the phone's memory while you write. Not saved, and never sent to us or to analytics. Only the result (right or wrong) is kept in your progress</td>
+              </tr>
+              <tr>
+                <td>Kana practice</td>
+                <td>Which hiragana and katakana you've written at least once, and whether you last chose Hiragana or Katakana and Trace or From memory</td>
+                <td>To mark the kana you've practiced and remember your choice</td>
+                <td>On your phone, and in your Android backup if it's on. Kept when you reset your progress</td>
               </tr>
               <tr>
                 <td>Lock screen photo (optional)</td>
@@ -124,7 +130,7 @@
               </tr>
               <tr>
                 <td>Settings</td>
-                <td>App language, dark mode, sound effects, reminder and lock screen settings, the date you accepted these documents, and whether you've already seen the update and rating prompts</td>
+                <td>App language, dark mode, sound effects, reminder and lock screen settings, the date you accepted these documents, whether you've already seen the update prompt, and the date the app last asked Google Play for its rating card (so it asks at most once every 32 days)</td>
                 <td>To remember your choices</td>
                 <td>On your phone, and in your Android backup if it's on</td>
               </tr>
@@ -157,7 +163,8 @@
         </p>
         <p>
           In the <strong>Drawing</strong> method, the strokes you write with your finger are checked on your phone
-          and thrown away when the exercise ends. They're never saved, uploaded or sent to analytics. Build from radicals,
+          and thrown away when the exercise ends. They're never saved, uploaded or sent to analytics. Kana practice works
+          the same way: only which kana you've written is kept, to show a small mark next to it. Build from radicals,
           Flashcards and Quiz answers work the same way: only whether you got the kanji right goes into your progress.
           If that ever changes, we'll update this policy first.
         </p>
@@ -190,11 +197,11 @@
         </p>
         <p>The app sends events like these:</p>
         <ul>
-          <li><strong>Learning:</strong> starting or finishing a JLPT level, N5 milestones, opening Flashcards, Quiz, Build from radicals or Drawing (and the first time you try each one), finishing a lesson with one of them, and finishing every kanji in a level and moving on to the next one. These events say which method you used, never what you drew or answered.</li>
+          <li><strong>Learning:</strong> starting or finishing a JLPT level, N5 milestones, opening Flashcards, Quiz, Build from radicals or Drawing (and the first time you try each one), finishing a lesson with one of them, and finishing every kanji in a level and moving on to the next one, and opening Kana practice. These events say which method you used, never what you drew or answered.</li>
           <li><strong>Reminders:</strong> your answer to Android's notification permission, the "turn on reminders" screen being shown and your answer, and turning the reminder switch on or off.</li>
           <li><strong>Purchases:</strong> opening the purchase page, starting, cancelling or failing a checkout, a completed purchase or free trial (with the plan), and restored purchases.</li>
           <li><strong>Ads and streak:</strong> a full-screen or rewarded ad being shown, counted or watched to the end, a reward given (+1 freeze or a streak brought back), a Premium learner using a monthly freeze or streak save, tapping a rewarded-ad button, and tapping "No ads".</li>
-          <li><strong>Other:</strong> the update pop-up, your answer and whether the update finished downloading and installing, setting Lock Screen Kanji, and resetting your progress.</li>
+          <li><strong>Other:</strong> the update pop-up, your answer and whether the update finished downloading and installing, the app asking Google Play to show its rating card (Google doesn't tell us whether it was shown or whether you rated), tapping "Rate I Love Kanji" in Settings, setting Lock Screen Kanji, and resetting your progress.</li>
         </ul>
         <p>
           Firebase also collects some things on its own, such as first open, sessions, time in the app, app updates
@@ -260,7 +267,9 @@
         <p>
           The app uses Google Play to check whether a newer version is available. If you agree in Google Play's update
           dialog, the update downloads, installs and restarts the app by itself (in the background, or the next time you open the app).
-          It may also show Google Play's rating card after you've learned 15 and 35 kanji. Both are run by Google.
+          It may also ask Google Play to show its rating card at a few milestones (streak days 3, 7, 15, 30, 60, 100 and 365,
+          or finishing a level), at most once every 32 days, and never on a day a full-screen ad is shown. Google decides
+          whether the card actually appears. Settings → Rate I Love Kanji opens the app's Google Play page. These are run by Google.
           We don't get your Google account details from them, and Google doesn't tell us whether you left a rating.
         </p>
 
@@ -282,7 +291,7 @@
 
         <h2 class="sec" id="how-we-use"><span class="n">11.</span><span>How we use information</span></h2>
         <ul>
-          <li>to run lessons in Flashcards, Quiz, Build from radicals and Drawing, reviews, streaks, audio, reminders and Lock Screen Kanji;</li>
+          <li>to run lessons in Flashcards, Quiz, Build from radicals and Drawing, reviews, streaks, audio, reminders, Lock Screen Kanji and Kana practice;</li>
           <li>to remember your settings and progress;</li>
           <li>to process, check and restore purchases and subscriptions through Google Play;</li>
           <li>to show ads to free learners and give rewards for rewarded ads;</li>
@@ -318,7 +327,7 @@
 
         <h2 class="sec" id="keeping-deleting"><span class="n">14.</span><span>How long we keep it and how to delete it</span></h2>
         <ul>
-          <li><strong>Start over:</strong> Settings → Reset progress deletes your learned kanji, reviews for every method, mistakes and streak. Your purchase stays.</li>
+          <li><strong>Start over:</strong> Settings → Reset progress deletes your learned kanji, reviews for every method, mistakes and streak. Your purchase and your Kana practice marks stay.</li>
           <li><strong>Delete everything on your phone:</strong> clear the app's storage or uninstall the app.</li>
           <li><strong>Android backup:</strong> delete it or turn it off in your phone's backup settings or your Google account.</li>
           <li><strong>Analytics:</strong> event data linked to the app instance ID is kept by Firebase for the period set in our Firebase settings, never longer than 14 months; after that only totals without any ID remain. Uninstalling resets the app instance ID, and you can reset your Advertising ID in your phone's settings.</li>
