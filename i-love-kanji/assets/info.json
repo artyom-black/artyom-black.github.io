@@ -2,7 +2,7 @@
   "name": "I Love Kanji",
   "kind": "App",
   "genre": "Education",
-  "line": "Learn 2,200 kanji from N5 to N1 four ways: flashcards, quizzes, Kanji Math and drawing.",
+  "line": "Learn 2,200 kanji from N5 to N1 four ways: flashcards, quizzes, Build from radicals and drawing.",
   "color": "#ee2229",
   "googlePlay": "https://play.google.com/store/apps/details?id=com.artyomblack.ilovekanji",
   "icon": "icon.webp",
@@ -12,7 +12,7 @@
   "facts": [
     "Flashcards: recall what each kanji means, then flip to check",
     "Quiz: pick the right reading of a real Japanese word",
-    "Kanji Math: build each kanji from its parts, like 一 + 人 = 大, with a memory tip for why they fit",
+    "Build from radicals: put together kanji made of the 214 official radicals, like 人 + 木 = 休",
     "Drawing: watch the stroke order, then write the kanji with your finger, every stroke checked",
     "Each method has its own smart reviews, right before you'd forget",
     "N5 is free with every feature, and the first 10 kanji of every other level are free to try"
@@ -22,7 +22,7 @@
     "N5 to N1",
     "Flashcards",
     "Quiz",
-    "Kanji Math",
+    "Build from radicals",
     "Drawing",
     "Stroke order",
     "Smart reviews",
